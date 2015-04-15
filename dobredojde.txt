@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 dobredojde kika
 nekam da pisham dobre ve najdov :D
+=======
+dobredojde kika 
+>>>>>>> origin/master
