@@ -1,0 +1,10 @@
+D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\bin\Debug\APP_FIKT_ProGrupa.exe.config
+D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\bin\Debug\APP_FIKT_ProGrupa.exe
+D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\bin\Debug\APP_FIKT_ProGrupa.pdb
+D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.csprojResolveAssemblyReference.cache
+D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.Properties.Resources.resources
+D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.csproj.GenerateResource.Cache
+D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.exe
+D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.pdb
+D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.frmStartingApp.resources
+D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.frmLogin.resources
