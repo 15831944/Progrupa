@@ -100,6 +100,7 @@
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.lblPass);
             this.Controls.Add(this.lblUserName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";

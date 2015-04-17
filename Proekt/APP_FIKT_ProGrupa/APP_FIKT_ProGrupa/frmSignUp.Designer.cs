@@ -44,6 +44,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -133,6 +134,7 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(100, 20);
             this.txtPass.TabIndex = 17;
+            this.txtPass.UseSystemPasswordChar = true;
             // 
             // label6
             // 
@@ -149,6 +151,7 @@
             this.txtPassConfirm.Name = "txtPassConfirm";
             this.txtPassConfirm.Size = new System.Drawing.Size(100, 20);
             this.txtPassConfirm.TabIndex = 19;
+            this.txtPassConfirm.UseSystemPasswordChar = true;
             // 
             // label7
             // 
@@ -164,9 +167,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(21, 19);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(407, 13);
+            this.label8.Size = new System.Drawing.Size(414, 13);
             this.label8.TabIndex = 20;
-            this.label8.Text = "Внесете податоци за вас во следните полиња. Сите полиња се задолжителни";
+            this.label8.Text = "*Внесете податоци за вас во следните полиња. Сите полиња се задолжителни.";
             // 
             // btnConfirm
             // 
@@ -176,12 +179,23 @@
             this.btnConfirm.TabIndex = 21;
             this.btnConfirm.Text = "Потврди";
             this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(21, 36);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(280, 13);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "*Полињата не смее да започнуваат со празно место.";
             // 
             // frmSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(468, 192);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtPassConfirm);
@@ -198,6 +212,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtIme);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmSignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSignUp";
@@ -226,5 +243,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Label label9;
     }
 }
