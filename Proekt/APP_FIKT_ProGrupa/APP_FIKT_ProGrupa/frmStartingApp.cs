@@ -12,6 +12,7 @@ namespace APP_FIKT_ProGrupa
 {
     public partial class frmStartingApp : Form
     {
+        int time = 0;
         public frmStartingApp()
         {
             InitializeComponent();
@@ -23,12 +24,28 @@ namespace APP_FIKT_ProGrupa
         }
 
         private void timer1_Tick(object sender, EventArgs e)
-        {        
-            timer1.Enabled = false;
-            frmLogin frmLogin = new frmLogin();
-            frmLogin.Show();
-            this.Enabled = false;
-            this.Hide();
+        {
+            time++;
+            if (time == 1)
+            {
+                lblFirma.Visible = true;
+                lblMentor.Visible = false;
+            }
+            else if (time == 2)
+            {
+                lblFirma.Visible = false;
+                lblIzrabotil1.Visible = true;
+                lblIzrabotil2.Visible = true;
+                lblIzrabotil3.Visible = true;
+            }
+            else
+            {
+                frmLogin frmLogin = new frmLogin();
+                frmLogin.Show();
+                timer1.Enabled = false;
+                this.Enabled = false;
+                this.Hide();
+            }
         }
     }
 }

@@ -7,11 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace APP_FIKT_ProGrupa
 {
-    public partial class frmLogin : Form
+    public partial class frmSignUp : Form
     {
         System.Data.SqlClient.SqlConnection Cnn;
         System.Data.SqlClient.SqlDataAdapter da;
@@ -20,21 +19,24 @@ namespace APP_FIKT_ProGrupa
         DataRow dr;
         int maxRow;
 
-        public frmLogin()
+        frmLogin frm;
+
+        public frmSignUp(frmLogin frm)
         {
+            this.frm = frm;
+            this.frm.Enabled = false;
             InitializeComponent();
         }
 
-        private void frmLogin_Load(object sender, EventArgs e)
+        private void frmSignUp_FormClosed(object sender, FormClosedEventArgs e)
         {
+            frm.Enabled = true;
         }
 
-        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
+        private void frmSignUp_Load(object sender, EventArgs e)
+        {}
 
-        private void btnLogIn_Click(object sender, EventArgs e)
+        private void txtUser_Validated(object sender, EventArgs e)
         {
             Cnn = new System.Data.SqlClient.SqlConnection();
             ds = new DataSet();
@@ -49,19 +51,13 @@ namespace APP_FIKT_ProGrupa
             for (int i = 0; i < maxRow; i++)
             {
                 dr = ds.Tables["Vraboten"].Rows[i];
-                if (txtUserName.Text == dr.ItemArray.GetValue(8).ToString())
-                    if (txtPass.Text == dr.ItemArray.GetValue(9).ToString())
-                        if (bool.Parse(dr.ItemArray.GetValue(5).ToString()) && bool.Parse(dr.ItemArray.GetValue(6).ToString()))
-                        {
-                            MessageBox.Show("Congratulations");
-                        }
+                if (txtUser.Text == dr.ItemArray.GetValue(8).ToString())
+                {
+                    MessageBox.Show("Корисничкото име не е слободно", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtUser.Focus();
+                }
             }
         }
-
-        private void btnSignUp_Click(object sender, EventArgs e)
-        {
-            frmSignUp frmSignUp = new frmSignUp(this);
-            frmSignUp.Show();
-        }
+   
     }
 }

@@ -33,6 +33,7 @@
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.lblPass = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
+            this.btnSignUp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLogIn
@@ -78,17 +79,29 @@
             this.lblUserName.TabIndex = 5;
             this.lblUserName.Text = "Корисничко Име";
             // 
+            // btnSignUp
+            // 
+            this.btnSignUp.Location = new System.Drawing.Point(41, 150);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(195, 23);
+            this.btnSignUp.TabIndex = 10;
+            this.btnSignUp.Text = "Регистрирај се";
+            this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.lblPass);
             this.Controls.Add(this.lblUserName);
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLogin_FormClosed);
             this.Load += new System.EventHandler(this.frmLogin_Load);
@@ -104,5 +117,6 @@
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label lblPass;
         private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Button btnSignUp;
     }
 }
