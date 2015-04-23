@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data.Sql;
+
 
 namespace APP_FIKT_ProGrupa
 {
@@ -21,6 +23,9 @@ namespace APP_FIKT_ProGrupa
         int maxRow;
         bool logedIn = false;
 
+        //context od .dbml fajlot za da mozi da pristapuvate do tabelite od bazata i do podatocite vo niv
+        BrziPonudiDataContext context = new BrziPonudiDataContext();
+
         public frmLogin()
         {
             InitializeComponent();
@@ -31,13 +36,34 @@ namespace APP_FIKT_ProGrupa
         }
 
         private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
-        {
+        {            
+
             if (!logedIn)
                 Application.Exit();
         }
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
+            var queryVraboten = (from vrb in context.Vrabotens
+                                 where vrb.KorisnickoImeV == txtUserName.Text && vrb.PasswordV== txtPass.Text && vrb.PotvrdenV == true && vrb.StatusV == true
+                                 select vrb).ToList();
+
+            if (queryVraboten.Count() > 0)
+            {
+                foreach(var vraboten in queryVraboten)
+                {
+                logedIn = true;
+                frmMenu menuOpen = new frmMenu(vraboten.AdminV, vraboten.VrabotenID);
+                menuOpen.Show();
+                //this.Close();
+                }
+            }
+            else 
+            {
+                MessageBox.Show("Не ви е дозволен пристап", "Непотврден профил", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            /*
             Cnn = new System.Data.SqlClient.SqlConnection();
             ds = new DataSet();
             Cnn.ConnectionString = "Data Source=LENOVO-PC\\SQLEXPRESS;Initial Catalog=DB_FIKT_ProGrupa;Integrated Security=True";
@@ -67,7 +93,7 @@ namespace APP_FIKT_ProGrupa
                             MessageBox.Show("Вашиот пристап до системот е одземен.", "Забранет пристап", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         else
                             MessageBox.Show("Вашиот профил сеуште не е потврден од администратор.", "Непотврден профил", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            }*/
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)

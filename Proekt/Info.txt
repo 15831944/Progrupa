@@ -9,4 +9,6 @@ sinhronizirani eden so drug.
 celta e da ne se barame na fb e sega ova go naprajv aj vidi, vaka taka,
 tuku samo mavame sync i kaj site izlegva srabotenoto :D
 
+baza backUp -> DB_FIKT_ProGrupa.bak
+proekt      -> dir APP_FIKT_ProGrupa
 pozz

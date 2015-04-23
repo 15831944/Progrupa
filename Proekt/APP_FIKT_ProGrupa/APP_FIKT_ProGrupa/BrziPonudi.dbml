@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB_FIKT_ProGrupa" Class="BrziPonudiDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LENOVO-PC\SQLEXPRESS;Initial Catalog=DB_FIKT_ProGrupa;Integrated Security=True" SettingsObjectName="APP_FIKT_ProGrupa.Properties.Settings" SettingsPropertyName="DB_FIKT_ProGrupaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblArhiva" Member="tblArhivas">
+    <Type Name="tblArhiva">
+      <Column Name="IDArhivskiBroj" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Arhivskibroj" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Brojac" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblDokumenti" Member="tblDokumentis">
+    <Type Name="tblDokumenti">
+      <Column Name="IDDokument" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Arhivskibroj" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BrojNaPonuda" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IDFirma" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IDVraboteni" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IDLicaZaKontakt" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DataZaOdgovor" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="KalendarskaGodina" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IzdadenoNa" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IDTemp" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="IDPonudaStavka" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblKlienti" Member="tblKlientis">
+    <Type Name="tblKlienti">
+      <Column Name="IDFirma" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ImeFirma" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Adresa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Telefon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="webstrana" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="komentar" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblLicaKontakt" Member="tblLicaKontakts">
+    <Type Name="tblLicaKontakt">
+      <Column Name="IDLicaZaKontakt" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDFirma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Prezime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Pozicija" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Telefon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Komentar" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblProizvodi" Member="tblProizvodis">
+    <Type Name="tblProizvodi">
+      <Column Name="IDProizvodPonuda" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Tip" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Naziv" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EdinicaMerka" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Cena" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblStavka" Member="tblStavkas">
+    <Type Name="tblStavka">
+      <Column Name="IDStavka" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDProizvodPonuda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Kolicina" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Cena" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IDPonuda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblTemplejt" Member="tblTemplejts">
+    <Type Name="tblTemplejt">
+      <Column Name="IDTemplejt" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LokacijaTemplejt" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ImeTemp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Vraboten" Member="Vrabotens">
+    <Type Name="Vraboten">
+      <Column Name="VrabotenID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ImeV" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="PrezimeV" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="EmailV" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TelefonV" Type="System.String" DbType="NVarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="StatusV" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PotvrdenV" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AdminV" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="KorisnickoImeV" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="PasswordV" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
