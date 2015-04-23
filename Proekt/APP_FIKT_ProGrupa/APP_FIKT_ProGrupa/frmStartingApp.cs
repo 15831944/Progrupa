@@ -28,8 +28,8 @@ namespace APP_FIKT_ProGrupa
             time++;
             if (time == 1)
             {
-                lblFirma.Visible = true;
                 lblMentor.Visible = false;
+                lblFirma.Visible = true;
             }
             else if (time == 2)
             {

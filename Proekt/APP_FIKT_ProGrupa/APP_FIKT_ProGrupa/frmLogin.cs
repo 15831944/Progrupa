@@ -19,6 +19,7 @@ namespace APP_FIKT_ProGrupa
         DataSet ds;
         DataRow dr;
         int maxRow;
+        bool logedIn = false;
 
         public frmLogin()
         {
@@ -31,7 +32,8 @@ namespace APP_FIKT_ProGrupa
 
         private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            if (!logedIn)
+                Application.Exit();
         }
 
         private void btnLogIn_Click(object sender, EventArgs e)
@@ -51,10 +53,20 @@ namespace APP_FIKT_ProGrupa
                 dr = ds.Tables["Vraboten"].Rows[i];
                 if (txtUserName.Text == dr.ItemArray.GetValue(8).ToString())
                     if (txtPass.Text == dr.ItemArray.GetValue(9).ToString())
-                        if (bool.Parse(dr.ItemArray.GetValue(5).ToString()) && bool.Parse(dr.ItemArray.GetValue(6).ToString()))
-                        {
-                            MessageBox.Show("Congratulations");
-                        }
+                        if (bool.Parse(dr.ItemArray.GetValue(5).ToString()))
+                            if (bool.Parse(dr.ItemArray.GetValue(6).ToString()))
+                            {
+                                logedIn = true;
+                                frmMenu menuOpen = new frmMenu(bool.Parse(dr.ItemArray.GetValue(7).ToString()), int.Parse(dr.ItemArray.GetValue(0).ToString()));
+                                menuOpen.Show();
+                                this.Close();
+                            }
+                            else
+                                MessageBox.Show("Вашиот профил сеуште не е потврден од администратор.", "Непотврден профил", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else if (bool.Parse(dr.ItemArray.GetValue(6).ToString()))
+                            MessageBox.Show("Вашиот пристап до системот е одземен.", "Забранет пристап", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else
+                            MessageBox.Show("Вашиот профил сеуште не е потврден од администратор.", "Непотврден профил", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

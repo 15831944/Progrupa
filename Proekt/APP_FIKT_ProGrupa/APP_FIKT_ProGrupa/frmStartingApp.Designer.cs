@@ -50,9 +50,9 @@
             this.lblMentor.ForeColor = System.Drawing.SystemColors.Window;
             this.lblMentor.Location = new System.Drawing.Point(81, 240);
             this.lblMentor.Name = "lblMentor";
-            this.lblMentor.Size = new System.Drawing.Size(191, 13);
+            this.lblMentor.Size = new System.Drawing.Size(194, 13);
             this.lblMentor.TabIndex = 0;
-            this.lblMentor.Text = "Ментор: Проф. Елена В. Ѓоргиевска";
+            this.lblMentor.Text = "Ментор: д-р Елена Влаху-Ѓоргиевска";
             this.lblMentor.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblFirma
@@ -86,11 +86,11 @@
             this.lblIzrabotil2.AutoSize = true;
             this.lblIzrabotil2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.lblIzrabotil2.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblIzrabotil2.Location = new System.Drawing.Point(183, 227);
+            this.lblIzrabotil2.Location = new System.Drawing.Point(159, 227);
             this.lblIzrabotil2.Name = "lblIzrabotil2";
-            this.lblIzrabotil2.Size = new System.Drawing.Size(89, 13);
+            this.lblIzrabotil2.Size = new System.Drawing.Size(113, 13);
             this.lblIzrabotil2.TabIndex = 3;
-            this.lblIzrabotil2.Text = "Тоде Ангелоски";
+            this.lblIzrabotil2.Text = "??Тоде Ангелоски??";
             this.lblIzrabotil2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.lblIzrabotil2.Visible = false;
             // 

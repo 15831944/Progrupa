@@ -9,6 +9,4 @@ D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_Pro
 D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.frmStartingApp.resources
 D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.frmLogin.resources
 D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.frmSignUp.resources
-C:\Users\lenovo\Documents\GitHub\Progrupa\Proekt\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\bin\Debug\APP_FIKT_ProGrupa.exe.config
-C:\Users\lenovo\Documents\GitHub\Progrupa\Proekt\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.exe
-C:\Users\lenovo\Documents\GitHub\Progrupa\Proekt\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.pdb
+D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.frmMenu.resources
