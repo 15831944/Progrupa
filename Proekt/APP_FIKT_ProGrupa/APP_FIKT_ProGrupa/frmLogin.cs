@@ -15,12 +15,7 @@ namespace APP_FIKT_ProGrupa
 {
     public partial class frmLogin : Form
     {
-        System.Data.SqlClient.SqlConnection Cnn;
-        System.Data.SqlClient.SqlDataAdapter da;
-        System.Data.SqlClient.SqlCommandBuilder cb;
-        DataSet ds;
-        DataRow dr;
-        int maxRow;
+        //променлива која служи за иклучување на формата по успешната најава
         bool logedIn = false;
 
         //context od .dbml fajlot za da mozi da pristapuvate do tabelite od bazata i do podatocite vo niv
@@ -31,75 +26,66 @@ namespace APP_FIKT_ProGrupa
             InitializeComponent();
         }
 
-        private void frmLogin_Load(object sender, EventArgs e)
+        //метод за логирање, го користиме за да може да се логира со клик или со ентер
+        private void logIn()
         {
-        }
-
-        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
-        {            
-
-            if (!logedIn)
-                Application.Exit();
+            //издвојување на поклопените податоци од базата со внесените податоци
+            var queryVraboten = (from vrb in context.Vrabotens
+                                 where vrb.KorisnickoImeV == txtUserName.Text && vrb.PasswordV == txtPass.Text && vrb.PotvrdenV == true && vrb.StatusV == true
+                                 select vrb).ToList();
+            //доколку има поклопени податоци, најавата е успешна
+            if (queryVraboten.Count() > 0)
+            {
+                foreach (var vraboten in queryVraboten)
+                {
+                    logedIn = true;
+                    frmMenu menuOpen = new frmMenu(vraboten.AdminV, vraboten.VrabotenID);
+                    menuOpen.Show();
+                    this.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не ви е дозволен пристап до системот.", "Неуспешна најава", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
         }
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            var queryVraboten = (from vrb in context.Vrabotens
-                                 where vrb.KorisnickoImeV == txtUserName.Text && vrb.PasswordV== txtPass.Text && vrb.PotvrdenV == true && vrb.StatusV == true
-                                 select vrb).ToList();
-
-            if (queryVraboten.Count() > 0)
-            {
-                foreach(var vraboten in queryVraboten)
-                {
-                logedIn = true;
-                frmMenu menuOpen = new frmMenu(vraboten.AdminV, vraboten.VrabotenID);
-                menuOpen.Show();
-                //this.Close();
-                }
-            }
-            else 
-            {
-                MessageBox.Show("Не ви е дозволен пристап", "Непотврден профил", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            /*
-            Cnn = new System.Data.SqlClient.SqlConnection();
-            ds = new DataSet();
-            Cnn.ConnectionString = "Data Source=LENOVO-PC\\SQLEXPRESS;Initial Catalog=DB_FIKT_ProGrupa;Integrated Security=True";
-            Cnn.Open();
-
-            da = new System.Data.SqlClient.SqlDataAdapter("Select * from Vraboten", Cnn);
-            da.Fill(ds, "Vraboten");
-            Cnn.Close();
-
-            maxRow = ds.Tables["Vraboten"].Rows.Count;
-            for (int i = 0; i < maxRow; i++)
-            {
-                dr = ds.Tables["Vraboten"].Rows[i];
-                if (txtUserName.Text == dr.ItemArray.GetValue(8).ToString())
-                    if (txtPass.Text == dr.ItemArray.GetValue(9).ToString())
-                        if (bool.Parse(dr.ItemArray.GetValue(5).ToString()))
-                            if (bool.Parse(dr.ItemArray.GetValue(6).ToString()))
-                            {
-                                logedIn = true;
-                                frmMenu menuOpen = new frmMenu(bool.Parse(dr.ItemArray.GetValue(7).ToString()), int.Parse(dr.ItemArray.GetValue(0).ToString()));
-                                menuOpen.Show();
-                                this.Close();
-                            }
-                            else
-                                MessageBox.Show("Вашиот профил сеуште не е потврден од администратор.", "Непотврден профил", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        else if (bool.Parse(dr.ItemArray.GetValue(6).ToString()))
-                            MessageBox.Show("Вашиот пристап до системот е одземен.", "Забранет пристап", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        else
-                            MessageBox.Show("Вашиот профил сеуште не е потврден од администратор.", "Непотврден профил", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }*/
+            logIn();
         }
 
+        private void txtPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                logIn();
+        }
+
+        //преминување од корисничко име на лозинка со користење на ентер
+        private void txtUserName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                System.Windows.Forms.SendKeys.Send("{tab}");
+                e.Handled = e.SuppressKeyPress = true;
+            }
+        }
+
+        //вклучување на нова форма, каде како објект ја праќаме оваа форма за да ја направиме да биде неактивна
+        //се додека формата frmSignUp е активна
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             frmSignUp frmSignUp = new frmSignUp(this);
             frmSignUp.Show();
+        }
+
+        
+
+        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (!logedIn)
+                Application.Exit();
         }
     }
 }

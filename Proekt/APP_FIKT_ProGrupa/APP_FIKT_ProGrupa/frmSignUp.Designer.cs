@@ -36,7 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtTel = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -111,13 +111,13 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Телефон";
             // 
-            // txtUser
+            // txtUserName
             // 
-            this.txtUser.Location = new System.Drawing.Point(328, 67);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(100, 20);
-            this.txtUser.TabIndex = 15;
-            this.txtUser.Validated += new System.EventHandler(this.txtUser_Validated);
+            this.txtUserName.Location = new System.Drawing.Point(328, 67);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(100, 20);
+            this.txtUserName.TabIndex = 15;
+            this.txtUserName.Validated += new System.EventHandler(this.txtUser_Validated);
             // 
             // label5
             // 
@@ -202,7 +202,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtUser);
+            this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtTel);
             this.Controls.Add(this.label4);
@@ -219,7 +219,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSignUp";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSignUp_FormClosed);
-            this.Load += new System.EventHandler(this.frmSignUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,7 +234,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTel;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label6;
