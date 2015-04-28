@@ -37,5 +37,11 @@ namespace APP_FIKT_ProGrupa
             }
         }
 
+        private void mnuVnesiVraboten_Click(object sender, EventArgs e)
+        {
+            frmNovVraboten novVrab = new frmNovVraboten(this);
+            novVrab.Show();
+        }
+
     }
 }

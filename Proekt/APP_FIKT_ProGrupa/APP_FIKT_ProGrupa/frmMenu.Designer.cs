@@ -111,6 +111,7 @@
             this.mnuVnesiVraboten.Name = "mnuVnesiVraboten";
             this.mnuVnesiVraboten.Size = new System.Drawing.Size(190, 22);
             this.mnuVnesiVraboten.Text = "Внеси вработен";
+            this.mnuVnesiVraboten.Click += new System.EventHandler(this.mnuVnesiVraboten_Click);
             // 
             // mnuPregledajVraboten
             // 
