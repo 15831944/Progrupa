@@ -173,7 +173,6 @@ namespace APP_FIKT_ProGrupa
                     context.SubmitChanges();
                     MessageBox.Show("Вашите податоци се успешно внесени. По добиена дозвола од администратор, ќе ви биде овозможен пристап до системот!", "Ви честитаме", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-
                     this.Close();
                 }
             }
