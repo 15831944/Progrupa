@@ -11,16 +11,4 @@ D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_Pro
 D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.frmSignUp.resources
 D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.frmMenu.resources
 D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.frmNovVraboten.resources
-C:\Users\lenovo\Documents\GitHub\Progrupa\Proekt\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\bin\Debug\APP_FIKT_ProGrupa.exe.config
-C:\Users\lenovo\Documents\GitHub\Progrupa\Proekt\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.exe
-C:\Users\lenovo\Documents\GitHub\Progrupa\Proekt\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.pdb
-C:\Users\lenovo\Documents\GitHub\Progrupa\Proekt\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\bin\Debug\APP_FIKT_ProGrupa.exe
-C:\Users\lenovo\Documents\GitHub\Progrupa\Proekt\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\bin\Debug\APP_FIKT_ProGrupa.pdb
-C:\Users\lenovo\Documents\GitHub\Progrupa\Proekt\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.csprojResolveAssemblyReference.cache
-C:\Users\lenovo\Documents\GitHub\Progrupa\Proekt\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.frmLogin.resources
-C:\Users\lenovo\Documents\GitHub\Progrupa\Proekt\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.frmMenu.resources
-C:\Users\lenovo\Documents\GitHub\Progrupa\Proekt\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.frmNovVraboten.resources
-C:\Users\lenovo\Documents\GitHub\Progrupa\Proekt\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.frmSignUp.resources
-C:\Users\lenovo\Documents\GitHub\Progrupa\Proekt\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.frmStartingApp.resources
-C:\Users\lenovo\Documents\GitHub\Progrupa\Proekt\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.Properties.Resources.resources
-C:\Users\lenovo\Documents\GitHub\Progrupa\Proekt\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.csproj.GenerateResource.Cache
+D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.frmPregVrab.resources

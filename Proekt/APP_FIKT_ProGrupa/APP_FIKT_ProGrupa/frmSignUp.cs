@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
-using System.Linq;
 
 namespace APP_FIKT_ProGrupa
 {
