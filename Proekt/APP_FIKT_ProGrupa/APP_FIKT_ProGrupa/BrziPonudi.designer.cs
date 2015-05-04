@@ -11,1720 +11,1720 @@
 
 namespace APP_FIKT_ProGrupa
 {
-	using System.Data.Linq;
-	using System.Data.Linq.Mapping;
-	using System.Data;
-	using System.Collections.Generic;
-	using System.Reflection;
-	using System.Linq;
-	using System.Linq.Expressions;
-	using System.ComponentModel;
-	using System;
-	
-	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="DB_FIKT_ProGrupa")]
-	public partial class BrziPonudiDataContext : System.Data.Linq.DataContext
-	{
-		
-		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
-		
-    #region Extensibility Method Definitions
-    partial void OnCreated();
-    partial void InserttblArhiva(tblArhiva instance);
-    partial void UpdatetblArhiva(tblArhiva instance);
-    partial void DeletetblArhiva(tblArhiva instance);
-    partial void InserttblDokumenti(tblDokumenti instance);
-    partial void UpdatetblDokumenti(tblDokumenti instance);
-    partial void DeletetblDokumenti(tblDokumenti instance);
-    partial void InserttblKlienti(tblKlienti instance);
-    partial void UpdatetblKlienti(tblKlienti instance);
-    partial void DeletetblKlienti(tblKlienti instance);
-    partial void InserttblLicaKontakt(tblLicaKontakt instance);
-    partial void UpdatetblLicaKontakt(tblLicaKontakt instance);
-    partial void DeletetblLicaKontakt(tblLicaKontakt instance);
-    partial void InserttblProizvodi(tblProizvodi instance);
-    partial void UpdatetblProizvodi(tblProizvodi instance);
-    partial void DeletetblProizvodi(tblProizvodi instance);
-    partial void InserttblStavka(tblStavka instance);
-    partial void UpdatetblStavka(tblStavka instance);
-    partial void DeletetblStavka(tblStavka instance);
-    partial void InserttblTemplejt(tblTemplejt instance);
-    partial void UpdatetblTemplejt(tblTemplejt instance);
-    partial void DeletetblTemplejt(tblTemplejt instance);
-    partial void InsertVraboten(Vraboten instance);
-    partial void UpdateVraboten(Vraboten instance);
-    partial void DeleteVraboten(Vraboten instance);
-    #endregion
-		
-		public BrziPonudiDataContext() : 
-				base(global::APP_FIKT_ProGrupa.Properties.Settings.Default.DB_FIKT_ProGrupaConnectionString, mappingSource)
-		{
-			OnCreated();
-		}
-		
-		public BrziPonudiDataContext(string connection) : 
-				base(connection, mappingSource)
-		{
-			OnCreated();
-		}
-		
-		public BrziPonudiDataContext(System.Data.IDbConnection connection) : 
-				base(connection, mappingSource)
-		{
-			OnCreated();
-		}
-		
-		public BrziPonudiDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
-				base(connection, mappingSource)
-		{
-			OnCreated();
-		}
-		
-		public BrziPonudiDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
-				base(connection, mappingSource)
-		{
-			OnCreated();
-		}
-		
-		public System.Data.Linq.Table<tblArhiva> tblArhivas
-		{
-			get
-			{
-				return this.GetTable<tblArhiva>();
-			}
-		}
-		
-		public System.Data.Linq.Table<tblDokumenti> tblDokumentis
-		{
-			get
-			{
-				return this.GetTable<tblDokumenti>();
-			}
-		}
-		
-		public System.Data.Linq.Table<tblKlienti> tblKlientis
-		{
-			get
-			{
-				return this.GetTable<tblKlienti>();
-			}
-		}
-		
-		public System.Data.Linq.Table<tblLicaKontakt> tblLicaKontakts
-		{
-			get
-			{
-				return this.GetTable<tblLicaKontakt>();
-			}
-		}
-		
-		public System.Data.Linq.Table<tblProizvodi> tblProizvodis
-		{
-			get
-			{
-				return this.GetTable<tblProizvodi>();
-			}
-		}
-		
-		public System.Data.Linq.Table<tblStavka> tblStavkas
-		{
-			get
-			{
-				return this.GetTable<tblStavka>();
-			}
-		}
-		
-		public System.Data.Linq.Table<tblTemplejt> tblTemplejts
-		{
-			get
-			{
-				return this.GetTable<tblTemplejt>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Vraboten> Vrabotens
-		{
-			get
-			{
-				return this.GetTable<Vraboten>();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblArhiva")]
-	public partial class tblArhiva : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _IDArhivskiBroj;
-		
-		private string _Arhivskibroj;
-		
-		private System.Nullable<int> _Brojac;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDArhivskiBrojChanging(int value);
-    partial void OnIDArhivskiBrojChanged();
-    partial void OnArhivskibrojChanging(string value);
-    partial void OnArhivskibrojChanged();
-    partial void OnBrojacChanging(System.Nullable<int> value);
-    partial void OnBrojacChanged();
-    #endregion
-		
-		public tblArhiva()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDArhivskiBroj", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int IDArhivskiBroj
-		{
-			get
-			{
-				return this._IDArhivskiBroj;
-			}
-			set
-			{
-				if ((this._IDArhivskiBroj != value))
-				{
-					this.OnIDArhivskiBrojChanging(value);
-					this.SendPropertyChanging();
-					this._IDArhivskiBroj = value;
-					this.SendPropertyChanged("IDArhivskiBroj");
-					this.OnIDArhivskiBrojChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Arhivskibroj", DbType="NVarChar(50)")]
-		public string Arhivskibroj
-		{
-			get
-			{
-				return this._Arhivskibroj;
-			}
-			set
-			{
-				if ((this._Arhivskibroj != value))
-				{
-					this.OnArhivskibrojChanging(value);
-					this.SendPropertyChanging();
-					this._Arhivskibroj = value;
-					this.SendPropertyChanged("Arhivskibroj");
-					this.OnArhivskibrojChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Brojac", DbType="Int")]
-		public System.Nullable<int> Brojac
-		{
-			get
-			{
-				return this._Brojac;
-			}
-			set
-			{
-				if ((this._Brojac != value))
-				{
-					this.OnBrojacChanging(value);
-					this.SendPropertyChanging();
-					this._Brojac = value;
-					this.SendPropertyChanged("Brojac");
-					this.OnBrojacChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblDokumenti")]
-	public partial class tblDokumenti : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _IDDokument;
-		
-		private string _Arhivskibroj;
-		
-		private string _BrojNaPonuda;
-		
-		private string _IDFirma;
-		
-		private string _IDVraboteni;
-		
-		private string _IDLicaZaKontakt;
-		
-		private System.Nullable<System.DateTime> _DataZaOdgovor;
-		
-		private string _KalendarskaGodina;
-		
-		private System.Nullable<System.DateTime> _IzdadenoNa;
-		
-		private string _IDTemp;
-		
-		private string _IDPonudaStavka;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDDokumentChanging(int value);
-    partial void OnIDDokumentChanged();
-    partial void OnArhivskibrojChanging(string value);
-    partial void OnArhivskibrojChanged();
-    partial void OnBrojNaPonudaChanging(string value);
-    partial void OnBrojNaPonudaChanged();
-    partial void OnIDFirmaChanging(string value);
-    partial void OnIDFirmaChanged();
-    partial void OnIDVraboteniChanging(string value);
-    partial void OnIDVraboteniChanged();
-    partial void OnIDLicaZaKontaktChanging(string value);
-    partial void OnIDLicaZaKontaktChanged();
-    partial void OnDataZaOdgovorChanging(System.Nullable<System.DateTime> value);
-    partial void OnDataZaOdgovorChanged();
-    partial void OnKalendarskaGodinaChanging(string value);
-    partial void OnKalendarskaGodinaChanged();
-    partial void OnIzdadenoNaChanging(System.Nullable<System.DateTime> value);
-    partial void OnIzdadenoNaChanged();
-    partial void OnIDTempChanging(string value);
-    partial void OnIDTempChanged();
-    partial void OnIDPonudaStavkaChanging(string value);
-    partial void OnIDPonudaStavkaChanged();
-    #endregion
-		
-		public tblDokumenti()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDDokument", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int IDDokument
-		{
-			get
-			{
-				return this._IDDokument;
-			}
-			set
-			{
-				if ((this._IDDokument != value))
-				{
-					this.OnIDDokumentChanging(value);
-					this.SendPropertyChanging();
-					this._IDDokument = value;
-					this.SendPropertyChanged("IDDokument");
-					this.OnIDDokumentChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Arhivskibroj", DbType="NVarChar(50)")]
-		public string Arhivskibroj
-		{
-			get
-			{
-				return this._Arhivskibroj;
-			}
-			set
-			{
-				if ((this._Arhivskibroj != value))
-				{
-					this.OnArhivskibrojChanging(value);
-					this.SendPropertyChanging();
-					this._Arhivskibroj = value;
-					this.SendPropertyChanged("Arhivskibroj");
-					this.OnArhivskibrojChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BrojNaPonuda", DbType="NVarChar(50)")]
-		public string BrojNaPonuda
-		{
-			get
-			{
-				return this._BrojNaPonuda;
-			}
-			set
-			{
-				if ((this._BrojNaPonuda != value))
-				{
-					this.OnBrojNaPonudaChanging(value);
-					this.SendPropertyChanging();
-					this._BrojNaPonuda = value;
-					this.SendPropertyChanged("BrojNaPonuda");
-					this.OnBrojNaPonudaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDFirma", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string IDFirma
-		{
-			get
-			{
-				return this._IDFirma;
-			}
-			set
-			{
-				if ((this._IDFirma != value))
-				{
-					this.OnIDFirmaChanging(value);
-					this.SendPropertyChanging();
-					this._IDFirma = value;
-					this.SendPropertyChanged("IDFirma");
-					this.OnIDFirmaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDVraboteni", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string IDVraboteni
-		{
-			get
-			{
-				return this._IDVraboteni;
-			}
-			set
-			{
-				if ((this._IDVraboteni != value))
-				{
-					this.OnIDVraboteniChanging(value);
-					this.SendPropertyChanging();
-					this._IDVraboteni = value;
-					this.SendPropertyChanged("IDVraboteni");
-					this.OnIDVraboteniChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDLicaZaKontakt", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string IDLicaZaKontakt
-		{
-			get
-			{
-				return this._IDLicaZaKontakt;
-			}
-			set
-			{
-				if ((this._IDLicaZaKontakt != value))
-				{
-					this.OnIDLicaZaKontaktChanging(value);
-					this.SendPropertyChanging();
-					this._IDLicaZaKontakt = value;
-					this.SendPropertyChanged("IDLicaZaKontakt");
-					this.OnIDLicaZaKontaktChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DataZaOdgovor", DbType="Date")]
-		public System.Nullable<System.DateTime> DataZaOdgovor
-		{
-			get
-			{
-				return this._DataZaOdgovor;
-			}
-			set
-			{
-				if ((this._DataZaOdgovor != value))
-				{
-					this.OnDataZaOdgovorChanging(value);
-					this.SendPropertyChanging();
-					this._DataZaOdgovor = value;
-					this.SendPropertyChanged("DataZaOdgovor");
-					this.OnDataZaOdgovorChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KalendarskaGodina", DbType="NVarChar(50)")]
-		public string KalendarskaGodina
-		{
-			get
-			{
-				return this._KalendarskaGodina;
-			}
-			set
-			{
-				if ((this._KalendarskaGodina != value))
-				{
-					this.OnKalendarskaGodinaChanging(value);
-					this.SendPropertyChanging();
-					this._KalendarskaGodina = value;
-					this.SendPropertyChanged("KalendarskaGodina");
-					this.OnKalendarskaGodinaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IzdadenoNa", DbType="Date")]
-		public System.Nullable<System.DateTime> IzdadenoNa
-		{
-			get
-			{
-				return this._IzdadenoNa;
-			}
-			set
-			{
-				if ((this._IzdadenoNa != value))
-				{
-					this.OnIzdadenoNaChanging(value);
-					this.SendPropertyChanging();
-					this._IzdadenoNa = value;
-					this.SendPropertyChanged("IzdadenoNa");
-					this.OnIzdadenoNaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDTemp", DbType="NChar(10)")]
-		public string IDTemp
-		{
-			get
-			{
-				return this._IDTemp;
-			}
-			set
-			{
-				if ((this._IDTemp != value))
-				{
-					this.OnIDTempChanging(value);
-					this.SendPropertyChanging();
-					this._IDTemp = value;
-					this.SendPropertyChanged("IDTemp");
-					this.OnIDTempChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDPonudaStavka", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string IDPonudaStavka
-		{
-			get
-			{
-				return this._IDPonudaStavka;
-			}
-			set
-			{
-				if ((this._IDPonudaStavka != value))
-				{
-					this.OnIDPonudaStavkaChanging(value);
-					this.SendPropertyChanging();
-					this._IDPonudaStavka = value;
-					this.SendPropertyChanged("IDPonudaStavka");
-					this.OnIDPonudaStavkaChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblKlienti")]
-	public partial class tblKlienti : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _IDFirma;
-		
-		private string _ImeFirma;
-		
-		private string _Adresa;
-		
-		private string _Telefon;
-		
-		private string _Email;
-		
-		private string _webstrana;
-		
-		private string _komentar;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDFirmaChanging(int value);
-    partial void OnIDFirmaChanged();
-    partial void OnImeFirmaChanging(string value);
-    partial void OnImeFirmaChanged();
-    partial void OnAdresaChanging(string value);
-    partial void OnAdresaChanged();
-    partial void OnTelefonChanging(string value);
-    partial void OnTelefonChanged();
-    partial void OnEmailChanging(string value);
-    partial void OnEmailChanged();
-    partial void OnwebstranaChanging(string value);
-    partial void OnwebstranaChanged();
-    partial void OnkomentarChanging(string value);
-    partial void OnkomentarChanged();
-    #endregion
-		
-		public tblKlienti()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDFirma", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int IDFirma
-		{
-			get
-			{
-				return this._IDFirma;
-			}
-			set
-			{
-				if ((this._IDFirma != value))
-				{
-					this.OnIDFirmaChanging(value);
-					this.SendPropertyChanging();
-					this._IDFirma = value;
-					this.SendPropertyChanged("IDFirma");
-					this.OnIDFirmaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ImeFirma", DbType="NVarChar(50)")]
-		public string ImeFirma
-		{
-			get
-			{
-				return this._ImeFirma;
-			}
-			set
-			{
-				if ((this._ImeFirma != value))
-				{
-					this.OnImeFirmaChanging(value);
-					this.SendPropertyChanging();
-					this._ImeFirma = value;
-					this.SendPropertyChanged("ImeFirma");
-					this.OnImeFirmaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Adresa", DbType="NVarChar(50)")]
-		public string Adresa
-		{
-			get
-			{
-				return this._Adresa;
-			}
-			set
-			{
-				if ((this._Adresa != value))
-				{
-					this.OnAdresaChanging(value);
-					this.SendPropertyChanging();
-					this._Adresa = value;
-					this.SendPropertyChanged("Adresa");
-					this.OnAdresaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Telefon", DbType="NVarChar(50)")]
-		public string Telefon
-		{
-			get
-			{
-				return this._Telefon;
-			}
-			set
-			{
-				if ((this._Telefon != value))
-				{
-					this.OnTelefonChanging(value);
-					this.SendPropertyChanging();
-					this._Telefon = value;
-					this.SendPropertyChanged("Telefon");
-					this.OnTelefonChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(50)")]
-		public string Email
-		{
-			get
-			{
-				return this._Email;
-			}
-			set
-			{
-				if ((this._Email != value))
-				{
-					this.OnEmailChanging(value);
-					this.SendPropertyChanging();
-					this._Email = value;
-					this.SendPropertyChanged("Email");
-					this.OnEmailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_webstrana", DbType="NVarChar(50)")]
-		public string webstrana
-		{
-			get
-			{
-				return this._webstrana;
-			}
-			set
-			{
-				if ((this._webstrana != value))
-				{
-					this.OnwebstranaChanging(value);
-					this.SendPropertyChanging();
-					this._webstrana = value;
-					this.SendPropertyChanged("webstrana");
-					this.OnwebstranaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_komentar", DbType="NVarChar(50)")]
-		public string komentar
-		{
-			get
-			{
-				return this._komentar;
-			}
-			set
-			{
-				if ((this._komentar != value))
-				{
-					this.OnkomentarChanging(value);
-					this.SendPropertyChanging();
-					this._komentar = value;
-					this.SendPropertyChanged("komentar");
-					this.OnkomentarChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblLicaKontakt")]
-	public partial class tblLicaKontakt : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _IDLicaZaKontakt;
-		
-		private int _IDFirma;
-		
-		private string _Ime;
-		
-		private string _Prezime;
-		
-		private string _Pozicija;
-		
-		private string _Email;
-		
-		private string _Telefon;
-		
-		private string _Komentar;
-		
-		private System.Nullable<bool> _Status;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDLicaZaKontaktChanging(int value);
-    partial void OnIDLicaZaKontaktChanged();
-    partial void OnIDFirmaChanging(int value);
-    partial void OnIDFirmaChanged();
-    partial void OnImeChanging(string value);
-    partial void OnImeChanged();
-    partial void OnPrezimeChanging(string value);
-    partial void OnPrezimeChanged();
-    partial void OnPozicijaChanging(string value);
-    partial void OnPozicijaChanged();
-    partial void OnEmailChanging(string value);
-    partial void OnEmailChanged();
-    partial void OnTelefonChanging(string value);
-    partial void OnTelefonChanged();
-    partial void OnKomentarChanging(string value);
-    partial void OnKomentarChanged();
-    partial void OnStatusChanging(System.Nullable<bool> value);
-    partial void OnStatusChanged();
-    #endregion
-		
-		public tblLicaKontakt()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDLicaZaKontakt", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int IDLicaZaKontakt
-		{
-			get
-			{
-				return this._IDLicaZaKontakt;
-			}
-			set
-			{
-				if ((this._IDLicaZaKontakt != value))
-				{
-					this.OnIDLicaZaKontaktChanging(value);
-					this.SendPropertyChanging();
-					this._IDLicaZaKontakt = value;
-					this.SendPropertyChanged("IDLicaZaKontakt");
-					this.OnIDLicaZaKontaktChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDFirma", DbType="Int NOT NULL")]
-		public int IDFirma
-		{
-			get
-			{
-				return this._IDFirma;
-			}
-			set
-			{
-				if ((this._IDFirma != value))
-				{
-					this.OnIDFirmaChanging(value);
-					this.SendPropertyChanging();
-					this._IDFirma = value;
-					this.SendPropertyChanged("IDFirma");
-					this.OnIDFirmaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ime", DbType="NVarChar(50)")]
-		public string Ime
-		{
-			get
-			{
-				return this._Ime;
-			}
-			set
-			{
-				if ((this._Ime != value))
-				{
-					this.OnImeChanging(value);
-					this.SendPropertyChanging();
-					this._Ime = value;
-					this.SendPropertyChanged("Ime");
-					this.OnImeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Prezime", DbType="NVarChar(50)")]
-		public string Prezime
-		{
-			get
-			{
-				return this._Prezime;
-			}
-			set
-			{
-				if ((this._Prezime != value))
-				{
-					this.OnPrezimeChanging(value);
-					this.SendPropertyChanging();
-					this._Prezime = value;
-					this.SendPropertyChanged("Prezime");
-					this.OnPrezimeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pozicija", DbType="NVarChar(50)")]
-		public string Pozicija
-		{
-			get
-			{
-				return this._Pozicija;
-			}
-			set
-			{
-				if ((this._Pozicija != value))
-				{
-					this.OnPozicijaChanging(value);
-					this.SendPropertyChanging();
-					this._Pozicija = value;
-					this.SendPropertyChanged("Pozicija");
-					this.OnPozicijaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(50)")]
-		public string Email
-		{
-			get
-			{
-				return this._Email;
-			}
-			set
-			{
-				if ((this._Email != value))
-				{
-					this.OnEmailChanging(value);
-					this.SendPropertyChanging();
-					this._Email = value;
-					this.SendPropertyChanged("Email");
-					this.OnEmailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Telefon", DbType="NVarChar(50)")]
-		public string Telefon
-		{
-			get
-			{
-				return this._Telefon;
-			}
-			set
-			{
-				if ((this._Telefon != value))
-				{
-					this.OnTelefonChanging(value);
-					this.SendPropertyChanging();
-					this._Telefon = value;
-					this.SendPropertyChanged("Telefon");
-					this.OnTelefonChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Komentar", DbType="NVarChar(50)")]
-		public string Komentar
-		{
-			get
-			{
-				return this._Komentar;
-			}
-			set
-			{
-				if ((this._Komentar != value))
-				{
-					this.OnKomentarChanging(value);
-					this.SendPropertyChanging();
-					this._Komentar = value;
-					this.SendPropertyChanged("Komentar");
-					this.OnKomentarChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="Bit")]
-		public System.Nullable<bool> Status
-		{
-			get
-			{
-				return this._Status;
-			}
-			set
-			{
-				if ((this._Status != value))
-				{
-					this.OnStatusChanging(value);
-					this.SendPropertyChanging();
-					this._Status = value;
-					this.SendPropertyChanged("Status");
-					this.OnStatusChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblProizvodi")]
-	public partial class tblProizvodi : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _IDProizvodPonuda;
-		
-		private string _Tip;
-		
-		private string _Naziv;
-		
-		private string _EdinicaMerka;
-		
-		private System.Nullable<int> _Cena;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDProizvodPonudaChanging(int value);
-    partial void OnIDProizvodPonudaChanged();
-    partial void OnTipChanging(string value);
-    partial void OnTipChanged();
-    partial void OnNazivChanging(string value);
-    partial void OnNazivChanged();
-    partial void OnEdinicaMerkaChanging(string value);
-    partial void OnEdinicaMerkaChanged();
-    partial void OnCenaChanging(System.Nullable<int> value);
-    partial void OnCenaChanged();
-    #endregion
-		
-		public tblProizvodi()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDProizvodPonuda", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int IDProizvodPonuda
-		{
-			get
-			{
-				return this._IDProizvodPonuda;
-			}
-			set
-			{
-				if ((this._IDProizvodPonuda != value))
-				{
-					this.OnIDProizvodPonudaChanging(value);
-					this.SendPropertyChanging();
-					this._IDProizvodPonuda = value;
-					this.SendPropertyChanged("IDProizvodPonuda");
-					this.OnIDProizvodPonudaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tip", DbType="NVarChar(50)")]
-		public string Tip
-		{
-			get
-			{
-				return this._Tip;
-			}
-			set
-			{
-				if ((this._Tip != value))
-				{
-					this.OnTipChanging(value);
-					this.SendPropertyChanging();
-					this._Tip = value;
-					this.SendPropertyChanged("Tip");
-					this.OnTipChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Naziv", DbType="NVarChar(50)")]
-		public string Naziv
-		{
-			get
-			{
-				return this._Naziv;
-			}
-			set
-			{
-				if ((this._Naziv != value))
-				{
-					this.OnNazivChanging(value);
-					this.SendPropertyChanging();
-					this._Naziv = value;
-					this.SendPropertyChanged("Naziv");
-					this.OnNazivChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EdinicaMerka", DbType="NVarChar(50)")]
-		public string EdinicaMerka
-		{
-			get
-			{
-				return this._EdinicaMerka;
-			}
-			set
-			{
-				if ((this._EdinicaMerka != value))
-				{
-					this.OnEdinicaMerkaChanging(value);
-					this.SendPropertyChanging();
-					this._EdinicaMerka = value;
-					this.SendPropertyChanged("EdinicaMerka");
-					this.OnEdinicaMerkaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cena", DbType="Int")]
-		public System.Nullable<int> Cena
-		{
-			get
-			{
-				return this._Cena;
-			}
-			set
-			{
-				if ((this._Cena != value))
-				{
-					this.OnCenaChanging(value);
-					this.SendPropertyChanging();
-					this._Cena = value;
-					this.SendPropertyChanged("Cena");
-					this.OnCenaChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblStavka")]
-	public partial class tblStavka : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _IDStavka;
-		
-		private int _IDProizvodPonuda;
-		
-		private string _Kolicina;
-		
-		private string _Cena;
-		
-		private int _IDPonuda;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDStavkaChanging(int value);
-    partial void OnIDStavkaChanged();
-    partial void OnIDProizvodPonudaChanging(int value);
-    partial void OnIDProizvodPonudaChanged();
-    partial void OnKolicinaChanging(string value);
-    partial void OnKolicinaChanged();
-    partial void OnCenaChanging(string value);
-    partial void OnCenaChanged();
-    partial void OnIDPonudaChanging(int value);
-    partial void OnIDPonudaChanged();
-    #endregion
-		
-		public tblStavka()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDStavka", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int IDStavka
-		{
-			get
-			{
-				return this._IDStavka;
-			}
-			set
-			{
-				if ((this._IDStavka != value))
-				{
-					this.OnIDStavkaChanging(value);
-					this.SendPropertyChanging();
-					this._IDStavka = value;
-					this.SendPropertyChanged("IDStavka");
-					this.OnIDStavkaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDProizvodPonuda", DbType="Int NOT NULL")]
-		public int IDProizvodPonuda
-		{
-			get
-			{
-				return this._IDProizvodPonuda;
-			}
-			set
-			{
-				if ((this._IDProizvodPonuda != value))
-				{
-					this.OnIDProizvodPonudaChanging(value);
-					this.SendPropertyChanging();
-					this._IDProizvodPonuda = value;
-					this.SendPropertyChanged("IDProizvodPonuda");
-					this.OnIDProizvodPonudaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Kolicina", DbType="NVarChar(50)")]
-		public string Kolicina
-		{
-			get
-			{
-				return this._Kolicina;
-			}
-			set
-			{
-				if ((this._Kolicina != value))
-				{
-					this.OnKolicinaChanging(value);
-					this.SendPropertyChanging();
-					this._Kolicina = value;
-					this.SendPropertyChanged("Kolicina");
-					this.OnKolicinaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cena", DbType="NVarChar(50)")]
-		public string Cena
-		{
-			get
-			{
-				return this._Cena;
-			}
-			set
-			{
-				if ((this._Cena != value))
-				{
-					this.OnCenaChanging(value);
-					this.SendPropertyChanging();
-					this._Cena = value;
-					this.SendPropertyChanged("Cena");
-					this.OnCenaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDPonuda", DbType="Int NOT NULL")]
-		public int IDPonuda
-		{
-			get
-			{
-				return this._IDPonuda;
-			}
-			set
-			{
-				if ((this._IDPonuda != value))
-				{
-					this.OnIDPonudaChanging(value);
-					this.SendPropertyChanging();
-					this._IDPonuda = value;
-					this.SendPropertyChanged("IDPonuda");
-					this.OnIDPonudaChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblTemplejt")]
-	public partial class tblTemplejt : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _IDTemplejt;
-		
-		private string _LokacijaTemplejt;
-		
-		private string _ImeTemp;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDTemplejtChanging(int value);
-    partial void OnIDTemplejtChanged();
-    partial void OnLokacijaTemplejtChanging(string value);
-    partial void OnLokacijaTemplejtChanged();
-    partial void OnImeTempChanging(string value);
-    partial void OnImeTempChanged();
-    #endregion
-		
-		public tblTemplejt()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDTemplejt", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int IDTemplejt
-		{
-			get
-			{
-				return this._IDTemplejt;
-			}
-			set
-			{
-				if ((this._IDTemplejt != value))
-				{
-					this.OnIDTemplejtChanging(value);
-					this.SendPropertyChanging();
-					this._IDTemplejt = value;
-					this.SendPropertyChanged("IDTemplejt");
-					this.OnIDTemplejtChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LokacijaTemplejt", DbType="NVarChar(MAX)")]
-		public string LokacijaTemplejt
-		{
-			get
-			{
-				return this._LokacijaTemplejt;
-			}
-			set
-			{
-				if ((this._LokacijaTemplejt != value))
-				{
-					this.OnLokacijaTemplejtChanging(value);
-					this.SendPropertyChanging();
-					this._LokacijaTemplejt = value;
-					this.SendPropertyChanged("LokacijaTemplejt");
-					this.OnLokacijaTemplejtChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ImeTemp", DbType="NVarChar(50)")]
-		public string ImeTemp
-		{
-			get
-			{
-				return this._ImeTemp;
-			}
-			set
-			{
-				if ((this._ImeTemp != value))
-				{
-					this.OnImeTempChanging(value);
-					this.SendPropertyChanging();
-					this._ImeTemp = value;
-					this.SendPropertyChanged("ImeTemp");
-					this.OnImeTempChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Vraboten")]
-	public partial class Vraboten : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _VrabotenID;
-		
-		private string _ImeV;
-		
-		private string _PrezimeV;
-		
-		private string _EmailV;
-		
-		private string _TelefonV;
-		
-		private bool _StatusV;
-		
-		private bool _PotvrdenV;
-		
-		private bool _AdminV;
-		
-		private string _KorisnickoImeV;
-		
-		private string _PasswordV;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnVrabotenIDChanging(int value);
-    partial void OnVrabotenIDChanged();
-    partial void OnImeVChanging(string value);
-    partial void OnImeVChanged();
-    partial void OnPrezimeVChanging(string value);
-    partial void OnPrezimeVChanged();
-    partial void OnEmailVChanging(string value);
-    partial void OnEmailVChanged();
-    partial void OnTelefonVChanging(string value);
-    partial void OnTelefonVChanged();
-    partial void OnStatusVChanging(bool value);
-    partial void OnStatusVChanged();
-    partial void OnPotvrdenVChanging(bool value);
-    partial void OnPotvrdenVChanged();
-    partial void OnAdminVChanging(bool value);
-    partial void OnAdminVChanged();
-    partial void OnKorisnickoImeVChanging(string value);
-    partial void OnKorisnickoImeVChanged();
-    partial void OnPasswordVChanging(string value);
-    partial void OnPasswordVChanged();
-    #endregion
-		
-		public Vraboten()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VrabotenID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int VrabotenID
-		{
-			get
-			{
-				return this._VrabotenID;
-			}
-			set
-			{
-				if ((this._VrabotenID != value))
-				{
-					this.OnVrabotenIDChanging(value);
-					this.SendPropertyChanging();
-					this._VrabotenID = value;
-					this.SendPropertyChanged("VrabotenID");
-					this.OnVrabotenIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ImeV", DbType="NVarChar(15) NOT NULL", CanBeNull=false)]
-		public string ImeV
-		{
-			get
-			{
-				return this._ImeV;
-			}
-			set
-			{
-				if ((this._ImeV != value))
-				{
-					this.OnImeVChanging(value);
-					this.SendPropertyChanging();
-					this._ImeV = value;
-					this.SendPropertyChanged("ImeV");
-					this.OnImeVChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrezimeV", DbType="NVarChar(25) NOT NULL", CanBeNull=false)]
-		public string PrezimeV
-		{
-			get
-			{
-				return this._PrezimeV;
-			}
-			set
-			{
-				if ((this._PrezimeV != value))
-				{
-					this.OnPrezimeVChanging(value);
-					this.SendPropertyChanging();
-					this._PrezimeV = value;
-					this.SendPropertyChanged("PrezimeV");
-					this.OnPrezimeVChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmailV", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string EmailV
-		{
-			get
-			{
-				return this._EmailV;
-			}
-			set
-			{
-				if ((this._EmailV != value))
-				{
-					this.OnEmailVChanging(value);
-					this.SendPropertyChanging();
-					this._EmailV = value;
-					this.SendPropertyChanged("EmailV");
-					this.OnEmailVChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TelefonV", DbType="NVarChar(9) NOT NULL", CanBeNull=false)]
-		public string TelefonV
-		{
-			get
-			{
-				return this._TelefonV;
-			}
-			set
-			{
-				if ((this._TelefonV != value))
-				{
-					this.OnTelefonVChanging(value);
-					this.SendPropertyChanging();
-					this._TelefonV = value;
-					this.SendPropertyChanged("TelefonV");
-					this.OnTelefonVChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StatusV", DbType="Bit NOT NULL")]
-		public bool StatusV
-		{
-			get
-			{
-				return this._StatusV;
-			}
-			set
-			{
-				if ((this._StatusV != value))
-				{
-					this.OnStatusVChanging(value);
-					this.SendPropertyChanging();
-					this._StatusV = value;
-					this.SendPropertyChanged("StatusV");
-					this.OnStatusVChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PotvrdenV", DbType="Bit NOT NULL")]
-		public bool PotvrdenV
-		{
-			get
-			{
-				return this._PotvrdenV;
-			}
-			set
-			{
-				if ((this._PotvrdenV != value))
-				{
-					this.OnPotvrdenVChanging(value);
-					this.SendPropertyChanging();
-					this._PotvrdenV = value;
-					this.SendPropertyChanged("PotvrdenV");
-					this.OnPotvrdenVChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdminV", DbType="Bit NOT NULL")]
-		public bool AdminV
-		{
-			get
-			{
-				return this._AdminV;
-			}
-			set
-			{
-				if ((this._AdminV != value))
-				{
-					this.OnAdminVChanging(value);
-					this.SendPropertyChanging();
-					this._AdminV = value;
-					this.SendPropertyChanged("AdminV");
-					this.OnAdminVChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KorisnickoImeV", DbType="NVarChar(25) NOT NULL", CanBeNull=false)]
-		public string KorisnickoImeV
-		{
-			get
-			{
-				return this._KorisnickoImeV;
-			}
-			set
-			{
-				if ((this._KorisnickoImeV != value))
-				{
-					this.OnKorisnickoImeVChanging(value);
-					this.SendPropertyChanging();
-					this._KorisnickoImeV = value;
-					this.SendPropertyChanged("KorisnickoImeV");
-					this.OnKorisnickoImeVChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PasswordV", DbType="NVarChar(25) NOT NULL", CanBeNull=false)]
-		public string PasswordV
-		{
-			get
-			{
-				return this._PasswordV;
-			}
-			set
-			{
-				if ((this._PasswordV != value))
-				{
-					this.OnPasswordVChanging(value);
-					this.SendPropertyChanging();
-					this._PasswordV = value;
-					this.SendPropertyChanged("PasswordV");
-					this.OnPasswordVChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
+    using System.Data.Linq;
+    using System.Data.Linq.Mapping;
+    using System.Data;
+    using System.Collections.Generic;
+    using System.Reflection;
+    using System.Linq;
+    using System.Linq.Expressions;
+    using System.ComponentModel;
+    using System;
+
+
+    [global::System.Data.Linq.Mapping.DatabaseAttribute(Name = "DB_FIKT_ProGrupa")]
+    public partial class BrziPonudiDataContext : System.Data.Linq.DataContext
+    {
+
+        private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
+
+        #region Extensibility Method Definitions
+        partial void OnCreated();
+        partial void InserttblArhiva(tblArhiva instance);
+        partial void UpdatetblArhiva(tblArhiva instance);
+        partial void DeletetblArhiva(tblArhiva instance);
+        partial void InserttblDokumenti(tblDokumenti instance);
+        partial void UpdatetblDokumenti(tblDokumenti instance);
+        partial void DeletetblDokumenti(tblDokumenti instance);
+        partial void InserttblKlienti(tblKlienti instance);
+        partial void UpdatetblKlienti(tblKlienti instance);
+        partial void DeletetblKlienti(tblKlienti instance);
+        partial void InserttblLicaKontakt(tblLicaKontakt instance);
+        partial void UpdatetblLicaKontakt(tblLicaKontakt instance);
+        partial void DeletetblLicaKontakt(tblLicaKontakt instance);
+        partial void InserttblProizvodi(tblProizvodi instance);
+        partial void UpdatetblProizvodi(tblProizvodi instance);
+        partial void DeletetblProizvodi(tblProizvodi instance);
+        partial void InserttblStavka(tblStavka instance);
+        partial void UpdatetblStavka(tblStavka instance);
+        partial void DeletetblStavka(tblStavka instance);
+        partial void InserttblTemplejt(tblTemplejt instance);
+        partial void UpdatetblTemplejt(tblTemplejt instance);
+        partial void DeletetblTemplejt(tblTemplejt instance);
+        partial void InsertVraboten(Vraboten instance);
+        partial void UpdateVraboten(Vraboten instance);
+        partial void DeleteVraboten(Vraboten instance);
+        #endregion
+
+        public BrziPonudiDataContext() :
+            base(global::APP_FIKT_ProGrupa.Properties.Settings.Default.DB_FIKT_ProGrupaConnectionString, mappingSource)
+        {
+            OnCreated();
+        }
+
+        public BrziPonudiDataContext(string connection) :
+            base(connection, mappingSource)
+        {
+            OnCreated();
+        }
+
+        public BrziPonudiDataContext(System.Data.IDbConnection connection) :
+            base(connection, mappingSource)
+        {
+            OnCreated();
+        }
+
+        public BrziPonudiDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) :
+            base(connection, mappingSource)
+        {
+            OnCreated();
+        }
+
+        public BrziPonudiDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) :
+            base(connection, mappingSource)
+        {
+            OnCreated();
+        }
+
+        public System.Data.Linq.Table<tblArhiva> tblArhivas
+        {
+            get
+            {
+                return this.GetTable<tblArhiva>();
+            }
+        }
+
+        public System.Data.Linq.Table<tblDokumenti> tblDokumentis
+        {
+            get
+            {
+                return this.GetTable<tblDokumenti>();
+            }
+        }
+
+        public System.Data.Linq.Table<tblKlienti> tblKlientis
+        {
+            get
+            {
+                return this.GetTable<tblKlienti>();
+            }
+        }
+
+        public System.Data.Linq.Table<tblLicaKontakt> tblLicaKontakts
+        {
+            get
+            {
+                return this.GetTable<tblLicaKontakt>();
+            }
+        }
+
+        public System.Data.Linq.Table<tblProizvodi> tblProizvodis
+        {
+            get
+            {
+                return this.GetTable<tblProizvodi>();
+            }
+        }
+
+        public System.Data.Linq.Table<tblStavka> tblStavkas
+        {
+            get
+            {
+                return this.GetTable<tblStavka>();
+            }
+        }
+
+        public System.Data.Linq.Table<tblTemplejt> tblTemplejts
+        {
+            get
+            {
+                return this.GetTable<tblTemplejt>();
+            }
+        }
+
+        public System.Data.Linq.Table<Vraboten> Vrabotens
+        {
+            get
+            {
+                return this.GetTable<Vraboten>();
+            }
+        }
+    }
+
+    [global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.tblArhiva")]
+    public partial class tblArhiva : INotifyPropertyChanging, INotifyPropertyChanged
+    {
+
+        private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+
+        private int _IDArhivskiBroj;
+
+        private string _Arhivskibroj;
+
+        private System.Nullable<int> _Brojac;
+
+        #region Extensibility Method Definitions
+        partial void OnLoaded();
+        partial void OnValidate(System.Data.Linq.ChangeAction action);
+        partial void OnCreated();
+        partial void OnIDArhivskiBrojChanging(int value);
+        partial void OnIDArhivskiBrojChanged();
+        partial void OnArhivskibrojChanging(string value);
+        partial void OnArhivskibrojChanged();
+        partial void OnBrojacChanging(System.Nullable<int> value);
+        partial void OnBrojacChanged();
+        #endregion
+
+        public tblArhiva()
+        {
+            OnCreated();
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_IDArhivskiBroj", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
+        public int IDArhivskiBroj
+        {
+            get
+            {
+                return this._IDArhivskiBroj;
+            }
+            set
+            {
+                if ((this._IDArhivskiBroj != value))
+                {
+                    this.OnIDArhivskiBrojChanging(value);
+                    this.SendPropertyChanging();
+                    this._IDArhivskiBroj = value;
+                    this.SendPropertyChanged("IDArhivskiBroj");
+                    this.OnIDArhivskiBrojChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Arhivskibroj", DbType = "NVarChar(50)")]
+        public string Arhivskibroj
+        {
+            get
+            {
+                return this._Arhivskibroj;
+            }
+            set
+            {
+                if ((this._Arhivskibroj != value))
+                {
+                    this.OnArhivskibrojChanging(value);
+                    this.SendPropertyChanging();
+                    this._Arhivskibroj = value;
+                    this.SendPropertyChanged("Arhivskibroj");
+                    this.OnArhivskibrojChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Brojac", DbType = "Int")]
+        public System.Nullable<int> Brojac
+        {
+            get
+            {
+                return this._Brojac;
+            }
+            set
+            {
+                if ((this._Brojac != value))
+                {
+                    this.OnBrojacChanging(value);
+                    this.SendPropertyChanging();
+                    this._Brojac = value;
+                    this.SendPropertyChanged("Brojac");
+                    this.OnBrojacChanged();
+                }
+            }
+        }
+
+        public event PropertyChangingEventHandler PropertyChanging;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void SendPropertyChanging()
+        {
+            if ((this.PropertyChanging != null))
+            {
+                this.PropertyChanging(this, emptyChangingEventArgs);
+            }
+        }
+
+        protected virtual void SendPropertyChanged(String propertyName)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+
+    [global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.tblDokumenti")]
+    public partial class tblDokumenti : INotifyPropertyChanging, INotifyPropertyChanged
+    {
+
+        private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+
+        private int _IDDokument;
+
+        private string _Arhivskibroj;
+
+        private string _BrojNaPonuda;
+
+        private string _IDFirma;
+
+        private string _IDVraboteni;
+
+        private string _IDLicaZaKontakt;
+
+        private System.Nullable<System.DateTime> _DataZaOdgovor;
+
+        private string _KalendarskaGodina;
+
+        private System.Nullable<System.DateTime> _IzdadenoNa;
+
+        private string _IDTemp;
+
+        private string _IDPonudaStavka;
+
+        #region Extensibility Method Definitions
+        partial void OnLoaded();
+        partial void OnValidate(System.Data.Linq.ChangeAction action);
+        partial void OnCreated();
+        partial void OnIDDokumentChanging(int value);
+        partial void OnIDDokumentChanged();
+        partial void OnArhivskibrojChanging(string value);
+        partial void OnArhivskibrojChanged();
+        partial void OnBrojNaPonudaChanging(string value);
+        partial void OnBrojNaPonudaChanged();
+        partial void OnIDFirmaChanging(string value);
+        partial void OnIDFirmaChanged();
+        partial void OnIDVraboteniChanging(string value);
+        partial void OnIDVraboteniChanged();
+        partial void OnIDLicaZaKontaktChanging(string value);
+        partial void OnIDLicaZaKontaktChanged();
+        partial void OnDataZaOdgovorChanging(System.Nullable<System.DateTime> value);
+        partial void OnDataZaOdgovorChanged();
+        partial void OnKalendarskaGodinaChanging(string value);
+        partial void OnKalendarskaGodinaChanged();
+        partial void OnIzdadenoNaChanging(System.Nullable<System.DateTime> value);
+        partial void OnIzdadenoNaChanged();
+        partial void OnIDTempChanging(string value);
+        partial void OnIDTempChanged();
+        partial void OnIDPonudaStavkaChanging(string value);
+        partial void OnIDPonudaStavkaChanged();
+        #endregion
+
+        public tblDokumenti()
+        {
+            OnCreated();
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_IDDokument", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
+        public int IDDokument
+        {
+            get
+            {
+                return this._IDDokument;
+            }
+            set
+            {
+                if ((this._IDDokument != value))
+                {
+                    this.OnIDDokumentChanging(value);
+                    this.SendPropertyChanging();
+                    this._IDDokument = value;
+                    this.SendPropertyChanged("IDDokument");
+                    this.OnIDDokumentChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Arhivskibroj", DbType = "NVarChar(50)")]
+        public string Arhivskibroj
+        {
+            get
+            {
+                return this._Arhivskibroj;
+            }
+            set
+            {
+                if ((this._Arhivskibroj != value))
+                {
+                    this.OnArhivskibrojChanging(value);
+                    this.SendPropertyChanging();
+                    this._Arhivskibroj = value;
+                    this.SendPropertyChanged("Arhivskibroj");
+                    this.OnArhivskibrojChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_BrojNaPonuda", DbType = "NVarChar(50)")]
+        public string BrojNaPonuda
+        {
+            get
+            {
+                return this._BrojNaPonuda;
+            }
+            set
+            {
+                if ((this._BrojNaPonuda != value))
+                {
+                    this.OnBrojNaPonudaChanging(value);
+                    this.SendPropertyChanging();
+                    this._BrojNaPonuda = value;
+                    this.SendPropertyChanged("BrojNaPonuda");
+                    this.OnBrojNaPonudaChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_IDFirma", DbType = "NVarChar(50) NOT NULL", CanBeNull = false)]
+        public string IDFirma
+        {
+            get
+            {
+                return this._IDFirma;
+            }
+            set
+            {
+                if ((this._IDFirma != value))
+                {
+                    this.OnIDFirmaChanging(value);
+                    this.SendPropertyChanging();
+                    this._IDFirma = value;
+                    this.SendPropertyChanged("IDFirma");
+                    this.OnIDFirmaChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_IDVraboteni", DbType = "NVarChar(50) NOT NULL", CanBeNull = false)]
+        public string IDVraboteni
+        {
+            get
+            {
+                return this._IDVraboteni;
+            }
+            set
+            {
+                if ((this._IDVraboteni != value))
+                {
+                    this.OnIDVraboteniChanging(value);
+                    this.SendPropertyChanging();
+                    this._IDVraboteni = value;
+                    this.SendPropertyChanged("IDVraboteni");
+                    this.OnIDVraboteniChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_IDLicaZaKontakt", DbType = "NVarChar(50) NOT NULL", CanBeNull = false)]
+        public string IDLicaZaKontakt
+        {
+            get
+            {
+                return this._IDLicaZaKontakt;
+            }
+            set
+            {
+                if ((this._IDLicaZaKontakt != value))
+                {
+                    this.OnIDLicaZaKontaktChanging(value);
+                    this.SendPropertyChanging();
+                    this._IDLicaZaKontakt = value;
+                    this.SendPropertyChanged("IDLicaZaKontakt");
+                    this.OnIDLicaZaKontaktChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_DataZaOdgovor", DbType = "Date")]
+        public System.Nullable<System.DateTime> DataZaOdgovor
+        {
+            get
+            {
+                return this._DataZaOdgovor;
+            }
+            set
+            {
+                if ((this._DataZaOdgovor != value))
+                {
+                    this.OnDataZaOdgovorChanging(value);
+                    this.SendPropertyChanging();
+                    this._DataZaOdgovor = value;
+                    this.SendPropertyChanged("DataZaOdgovor");
+                    this.OnDataZaOdgovorChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_KalendarskaGodina", DbType = "NVarChar(50)")]
+        public string KalendarskaGodina
+        {
+            get
+            {
+                return this._KalendarskaGodina;
+            }
+            set
+            {
+                if ((this._KalendarskaGodina != value))
+                {
+                    this.OnKalendarskaGodinaChanging(value);
+                    this.SendPropertyChanging();
+                    this._KalendarskaGodina = value;
+                    this.SendPropertyChanged("KalendarskaGodina");
+                    this.OnKalendarskaGodinaChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_IzdadenoNa", DbType = "Date")]
+        public System.Nullable<System.DateTime> IzdadenoNa
+        {
+            get
+            {
+                return this._IzdadenoNa;
+            }
+            set
+            {
+                if ((this._IzdadenoNa != value))
+                {
+                    this.OnIzdadenoNaChanging(value);
+                    this.SendPropertyChanging();
+                    this._IzdadenoNa = value;
+                    this.SendPropertyChanged("IzdadenoNa");
+                    this.OnIzdadenoNaChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_IDTemp", DbType = "NChar(10)")]
+        public string IDTemp
+        {
+            get
+            {
+                return this._IDTemp;
+            }
+            set
+            {
+                if ((this._IDTemp != value))
+                {
+                    this.OnIDTempChanging(value);
+                    this.SendPropertyChanging();
+                    this._IDTemp = value;
+                    this.SendPropertyChanged("IDTemp");
+                    this.OnIDTempChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_IDPonudaStavka", DbType = "NVarChar(50) NOT NULL", CanBeNull = false)]
+        public string IDPonudaStavka
+        {
+            get
+            {
+                return this._IDPonudaStavka;
+            }
+            set
+            {
+                if ((this._IDPonudaStavka != value))
+                {
+                    this.OnIDPonudaStavkaChanging(value);
+                    this.SendPropertyChanging();
+                    this._IDPonudaStavka = value;
+                    this.SendPropertyChanged("IDPonudaStavka");
+                    this.OnIDPonudaStavkaChanged();
+                }
+            }
+        }
+
+        public event PropertyChangingEventHandler PropertyChanging;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void SendPropertyChanging()
+        {
+            if ((this.PropertyChanging != null))
+            {
+                this.PropertyChanging(this, emptyChangingEventArgs);
+            }
+        }
+
+        protected virtual void SendPropertyChanged(String propertyName)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+
+    [global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.tblKlienti")]
+    public partial class tblKlienti : INotifyPropertyChanging, INotifyPropertyChanged
+    {
+
+        private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+
+        private int _IDFirma;
+
+        private string _ImeFirma;
+
+        private string _Adresa;
+
+        private string _Telefon;
+
+        private string _Email;
+
+        private string _webstrana;
+
+        private string _komentar;
+
+        #region Extensibility Method Definitions
+        partial void OnLoaded();
+        partial void OnValidate(System.Data.Linq.ChangeAction action);
+        partial void OnCreated();
+        partial void OnIDFirmaChanging(int value);
+        partial void OnIDFirmaChanged();
+        partial void OnImeFirmaChanging(string value);
+        partial void OnImeFirmaChanged();
+        partial void OnAdresaChanging(string value);
+        partial void OnAdresaChanged();
+        partial void OnTelefonChanging(string value);
+        partial void OnTelefonChanged();
+        partial void OnEmailChanging(string value);
+        partial void OnEmailChanged();
+        partial void OnwebstranaChanging(string value);
+        partial void OnwebstranaChanged();
+        partial void OnkomentarChanging(string value);
+        partial void OnkomentarChanged();
+        #endregion
+
+        public tblKlienti()
+        {
+            OnCreated();
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_IDFirma", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
+        public int IDFirma
+        {
+            get
+            {
+                return this._IDFirma;
+            }
+            set
+            {
+                if ((this._IDFirma != value))
+                {
+                    this.OnIDFirmaChanging(value);
+                    this.SendPropertyChanging();
+                    this._IDFirma = value;
+                    this.SendPropertyChanged("IDFirma");
+                    this.OnIDFirmaChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_ImeFirma", DbType = "NVarChar(50)")]
+        public string ImeFirma
+        {
+            get
+            {
+                return this._ImeFirma;
+            }
+            set
+            {
+                if ((this._ImeFirma != value))
+                {
+                    this.OnImeFirmaChanging(value);
+                    this.SendPropertyChanging();
+                    this._ImeFirma = value;
+                    this.SendPropertyChanged("ImeFirma");
+                    this.OnImeFirmaChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Adresa", DbType = "NVarChar(50)")]
+        public string Adresa
+        {
+            get
+            {
+                return this._Adresa;
+            }
+            set
+            {
+                if ((this._Adresa != value))
+                {
+                    this.OnAdresaChanging(value);
+                    this.SendPropertyChanging();
+                    this._Adresa = value;
+                    this.SendPropertyChanged("Adresa");
+                    this.OnAdresaChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Telefon", DbType = "NVarChar(50)")]
+        public string Telefon
+        {
+            get
+            {
+                return this._Telefon;
+            }
+            set
+            {
+                if ((this._Telefon != value))
+                {
+                    this.OnTelefonChanging(value);
+                    this.SendPropertyChanging();
+                    this._Telefon = value;
+                    this.SendPropertyChanged("Telefon");
+                    this.OnTelefonChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Email", DbType = "NVarChar(50)")]
+        public string Email
+        {
+            get
+            {
+                return this._Email;
+            }
+            set
+            {
+                if ((this._Email != value))
+                {
+                    this.OnEmailChanging(value);
+                    this.SendPropertyChanging();
+                    this._Email = value;
+                    this.SendPropertyChanged("Email");
+                    this.OnEmailChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_webstrana", DbType = "NVarChar(50)")]
+        public string webstrana
+        {
+            get
+            {
+                return this._webstrana;
+            }
+            set
+            {
+                if ((this._webstrana != value))
+                {
+                    this.OnwebstranaChanging(value);
+                    this.SendPropertyChanging();
+                    this._webstrana = value;
+                    this.SendPropertyChanged("webstrana");
+                    this.OnwebstranaChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_komentar", DbType = "NVarChar(50)")]
+        public string komentar
+        {
+            get
+            {
+                return this._komentar;
+            }
+            set
+            {
+                if ((this._komentar != value))
+                {
+                    this.OnkomentarChanging(value);
+                    this.SendPropertyChanging();
+                    this._komentar = value;
+                    this.SendPropertyChanged("komentar");
+                    this.OnkomentarChanged();
+                }
+            }
+        }
+
+        public event PropertyChangingEventHandler PropertyChanging;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void SendPropertyChanging()
+        {
+            if ((this.PropertyChanging != null))
+            {
+                this.PropertyChanging(this, emptyChangingEventArgs);
+            }
+        }
+
+        protected virtual void SendPropertyChanged(String propertyName)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+
+    [global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.tblLicaKontakt")]
+    public partial class tblLicaKontakt : INotifyPropertyChanging, INotifyPropertyChanged
+    {
+
+        private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+
+        private int _IDLicaZaKontakt;
+
+        private int _IDFirma;
+
+        private string _Ime;
+
+        private string _Prezime;
+
+        private string _Pozicija;
+
+        private string _Email;
+
+        private string _Telefon;
+
+        private string _Komentar;
+
+        private System.Nullable<bool> _Status;
+
+        #region Extensibility Method Definitions
+        partial void OnLoaded();
+        partial void OnValidate(System.Data.Linq.ChangeAction action);
+        partial void OnCreated();
+        partial void OnIDLicaZaKontaktChanging(int value);
+        partial void OnIDLicaZaKontaktChanged();
+        partial void OnIDFirmaChanging(int value);
+        partial void OnIDFirmaChanged();
+        partial void OnImeChanging(string value);
+        partial void OnImeChanged();
+        partial void OnPrezimeChanging(string value);
+        partial void OnPrezimeChanged();
+        partial void OnPozicijaChanging(string value);
+        partial void OnPozicijaChanged();
+        partial void OnEmailChanging(string value);
+        partial void OnEmailChanged();
+        partial void OnTelefonChanging(string value);
+        partial void OnTelefonChanged();
+        partial void OnKomentarChanging(string value);
+        partial void OnKomentarChanged();
+        partial void OnStatusChanging(System.Nullable<bool> value);
+        partial void OnStatusChanged();
+        #endregion
+
+        public tblLicaKontakt()
+        {
+            OnCreated();
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_IDLicaZaKontakt", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
+        public int IDLicaZaKontakt
+        {
+            get
+            {
+                return this._IDLicaZaKontakt;
+            }
+            set
+            {
+                if ((this._IDLicaZaKontakt != value))
+                {
+                    this.OnIDLicaZaKontaktChanging(value);
+                    this.SendPropertyChanging();
+                    this._IDLicaZaKontakt = value;
+                    this.SendPropertyChanged("IDLicaZaKontakt");
+                    this.OnIDLicaZaKontaktChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_IDFirma", DbType = "Int NOT NULL")]
+        public int IDFirma
+        {
+            get
+            {
+                return this._IDFirma;
+            }
+            set
+            {
+                if ((this._IDFirma != value))
+                {
+                    this.OnIDFirmaChanging(value);
+                    this.SendPropertyChanging();
+                    this._IDFirma = value;
+                    this.SendPropertyChanged("IDFirma");
+                    this.OnIDFirmaChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Ime", DbType = "NVarChar(50)")]
+        public string Ime
+        {
+            get
+            {
+                return this._Ime;
+            }
+            set
+            {
+                if ((this._Ime != value))
+                {
+                    this.OnImeChanging(value);
+                    this.SendPropertyChanging();
+                    this._Ime = value;
+                    this.SendPropertyChanged("Ime");
+                    this.OnImeChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Prezime", DbType = "NVarChar(50)")]
+        public string Prezime
+        {
+            get
+            {
+                return this._Prezime;
+            }
+            set
+            {
+                if ((this._Prezime != value))
+                {
+                    this.OnPrezimeChanging(value);
+                    this.SendPropertyChanging();
+                    this._Prezime = value;
+                    this.SendPropertyChanged("Prezime");
+                    this.OnPrezimeChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Pozicija", DbType = "NVarChar(50)")]
+        public string Pozicija
+        {
+            get
+            {
+                return this._Pozicija;
+            }
+            set
+            {
+                if ((this._Pozicija != value))
+                {
+                    this.OnPozicijaChanging(value);
+                    this.SendPropertyChanging();
+                    this._Pozicija = value;
+                    this.SendPropertyChanged("Pozicija");
+                    this.OnPozicijaChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Email", DbType = "NVarChar(50)")]
+        public string Email
+        {
+            get
+            {
+                return this._Email;
+            }
+            set
+            {
+                if ((this._Email != value))
+                {
+                    this.OnEmailChanging(value);
+                    this.SendPropertyChanging();
+                    this._Email = value;
+                    this.SendPropertyChanged("Email");
+                    this.OnEmailChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Telefon", DbType = "NVarChar(50)")]
+        public string Telefon
+        {
+            get
+            {
+                return this._Telefon;
+            }
+            set
+            {
+                if ((this._Telefon != value))
+                {
+                    this.OnTelefonChanging(value);
+                    this.SendPropertyChanging();
+                    this._Telefon = value;
+                    this.SendPropertyChanged("Telefon");
+                    this.OnTelefonChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Komentar", DbType = "NVarChar(50)")]
+        public string Komentar
+        {
+            get
+            {
+                return this._Komentar;
+            }
+            set
+            {
+                if ((this._Komentar != value))
+                {
+                    this.OnKomentarChanging(value);
+                    this.SendPropertyChanging();
+                    this._Komentar = value;
+                    this.SendPropertyChanged("Komentar");
+                    this.OnKomentarChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Status", DbType = "Bit")]
+        public System.Nullable<bool> Status
+        {
+            get
+            {
+                return this._Status;
+            }
+            set
+            {
+                if ((this._Status != value))
+                {
+                    this.OnStatusChanging(value);
+                    this.SendPropertyChanging();
+                    this._Status = value;
+                    this.SendPropertyChanged("Status");
+                    this.OnStatusChanged();
+                }
+            }
+        }
+
+        public event PropertyChangingEventHandler PropertyChanging;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void SendPropertyChanging()
+        {
+            if ((this.PropertyChanging != null))
+            {
+                this.PropertyChanging(this, emptyChangingEventArgs);
+            }
+        }
+
+        protected virtual void SendPropertyChanged(String propertyName)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+
+    [global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.tblProizvodi")]
+    public partial class tblProizvodi : INotifyPropertyChanging, INotifyPropertyChanged
+    {
+
+        private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+
+        private int _IDProizvodPonuda;
+
+        private string _Tip;
+
+        private string _Naziv;
+
+        private string _EdinicaMerka;
+
+        private System.Nullable<int> _Cena;
+
+        #region Extensibility Method Definitions
+        partial void OnLoaded();
+        partial void OnValidate(System.Data.Linq.ChangeAction action);
+        partial void OnCreated();
+        partial void OnIDProizvodPonudaChanging(int value);
+        partial void OnIDProizvodPonudaChanged();
+        partial void OnTipChanging(string value);
+        partial void OnTipChanged();
+        partial void OnNazivChanging(string value);
+        partial void OnNazivChanged();
+        partial void OnEdinicaMerkaChanging(string value);
+        partial void OnEdinicaMerkaChanged();
+        partial void OnCenaChanging(System.Nullable<int> value);
+        partial void OnCenaChanged();
+        #endregion
+
+        public tblProizvodi()
+        {
+            OnCreated();
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_IDProizvodPonuda", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
+        public int IDProizvodPonuda
+        {
+            get
+            {
+                return this._IDProizvodPonuda;
+            }
+            set
+            {
+                if ((this._IDProizvodPonuda != value))
+                {
+                    this.OnIDProizvodPonudaChanging(value);
+                    this.SendPropertyChanging();
+                    this._IDProizvodPonuda = value;
+                    this.SendPropertyChanged("IDProizvodPonuda");
+                    this.OnIDProizvodPonudaChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Tip", DbType = "NVarChar(50)")]
+        public string Tip
+        {
+            get
+            {
+                return this._Tip;
+            }
+            set
+            {
+                if ((this._Tip != value))
+                {
+                    this.OnTipChanging(value);
+                    this.SendPropertyChanging();
+                    this._Tip = value;
+                    this.SendPropertyChanged("Tip");
+                    this.OnTipChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Naziv", DbType = "NVarChar(50)")]
+        public string Naziv
+        {
+            get
+            {
+                return this._Naziv;
+            }
+            set
+            {
+                if ((this._Naziv != value))
+                {
+                    this.OnNazivChanging(value);
+                    this.SendPropertyChanging();
+                    this._Naziv = value;
+                    this.SendPropertyChanged("Naziv");
+                    this.OnNazivChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_EdinicaMerka", DbType = "NVarChar(50)")]
+        public string EdinicaMerka
+        {
+            get
+            {
+                return this._EdinicaMerka;
+            }
+            set
+            {
+                if ((this._EdinicaMerka != value))
+                {
+                    this.OnEdinicaMerkaChanging(value);
+                    this.SendPropertyChanging();
+                    this._EdinicaMerka = value;
+                    this.SendPropertyChanged("EdinicaMerka");
+                    this.OnEdinicaMerkaChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Cena", DbType = "Int")]
+        public System.Nullable<int> Cena
+        {
+            get
+            {
+                return this._Cena;
+            }
+            set
+            {
+                if ((this._Cena != value))
+                {
+                    this.OnCenaChanging(value);
+                    this.SendPropertyChanging();
+                    this._Cena = value;
+                    this.SendPropertyChanged("Cena");
+                    this.OnCenaChanged();
+                }
+            }
+        }
+
+        public event PropertyChangingEventHandler PropertyChanging;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void SendPropertyChanging()
+        {
+            if ((this.PropertyChanging != null))
+            {
+                this.PropertyChanging(this, emptyChangingEventArgs);
+            }
+        }
+
+        protected virtual void SendPropertyChanged(String propertyName)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+
+    [global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.tblStavka")]
+    public partial class tblStavka : INotifyPropertyChanging, INotifyPropertyChanged
+    {
+
+        private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+
+        private int _IDStavka;
+
+        private int _IDProizvodPonuda;
+
+        private string _Kolicina;
+
+        private string _Cena;
+
+        private int _IDPonuda;
+
+        #region Extensibility Method Definitions
+        partial void OnLoaded();
+        partial void OnValidate(System.Data.Linq.ChangeAction action);
+        partial void OnCreated();
+        partial void OnIDStavkaChanging(int value);
+        partial void OnIDStavkaChanged();
+        partial void OnIDProizvodPonudaChanging(int value);
+        partial void OnIDProizvodPonudaChanged();
+        partial void OnKolicinaChanging(string value);
+        partial void OnKolicinaChanged();
+        partial void OnCenaChanging(string value);
+        partial void OnCenaChanged();
+        partial void OnIDPonudaChanging(int value);
+        partial void OnIDPonudaChanged();
+        #endregion
+
+        public tblStavka()
+        {
+            OnCreated();
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_IDStavka", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
+        public int IDStavka
+        {
+            get
+            {
+                return this._IDStavka;
+            }
+            set
+            {
+                if ((this._IDStavka != value))
+                {
+                    this.OnIDStavkaChanging(value);
+                    this.SendPropertyChanging();
+                    this._IDStavka = value;
+                    this.SendPropertyChanged("IDStavka");
+                    this.OnIDStavkaChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_IDProizvodPonuda", DbType = "Int NOT NULL")]
+        public int IDProizvodPonuda
+        {
+            get
+            {
+                return this._IDProizvodPonuda;
+            }
+            set
+            {
+                if ((this._IDProizvodPonuda != value))
+                {
+                    this.OnIDProizvodPonudaChanging(value);
+                    this.SendPropertyChanging();
+                    this._IDProizvodPonuda = value;
+                    this.SendPropertyChanged("IDProizvodPonuda");
+                    this.OnIDProizvodPonudaChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Kolicina", DbType = "NVarChar(50)")]
+        public string Kolicina
+        {
+            get
+            {
+                return this._Kolicina;
+            }
+            set
+            {
+                if ((this._Kolicina != value))
+                {
+                    this.OnKolicinaChanging(value);
+                    this.SendPropertyChanging();
+                    this._Kolicina = value;
+                    this.SendPropertyChanged("Kolicina");
+                    this.OnKolicinaChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Cena", DbType = "NVarChar(50)")]
+        public string Cena
+        {
+            get
+            {
+                return this._Cena;
+            }
+            set
+            {
+                if ((this._Cena != value))
+                {
+                    this.OnCenaChanging(value);
+                    this.SendPropertyChanging();
+                    this._Cena = value;
+                    this.SendPropertyChanged("Cena");
+                    this.OnCenaChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_IDPonuda", DbType = "Int NOT NULL")]
+        public int IDPonuda
+        {
+            get
+            {
+                return this._IDPonuda;
+            }
+            set
+            {
+                if ((this._IDPonuda != value))
+                {
+                    this.OnIDPonudaChanging(value);
+                    this.SendPropertyChanging();
+                    this._IDPonuda = value;
+                    this.SendPropertyChanged("IDPonuda");
+                    this.OnIDPonudaChanged();
+                }
+            }
+        }
+
+        public event PropertyChangingEventHandler PropertyChanging;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void SendPropertyChanging()
+        {
+            if ((this.PropertyChanging != null))
+            {
+                this.PropertyChanging(this, emptyChangingEventArgs);
+            }
+        }
+
+        protected virtual void SendPropertyChanged(String propertyName)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+
+    [global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.tblTemplejt")]
+    public partial class tblTemplejt : INotifyPropertyChanging, INotifyPropertyChanged
+    {
+
+        private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+
+        private int _IDTemplejt;
+
+        private string _LokacijaTemplejt;
+
+        private string _ImeTemp;
+
+        #region Extensibility Method Definitions
+        partial void OnLoaded();
+        partial void OnValidate(System.Data.Linq.ChangeAction action);
+        partial void OnCreated();
+        partial void OnIDTemplejtChanging(int value);
+        partial void OnIDTemplejtChanged();
+        partial void OnLokacijaTemplejtChanging(string value);
+        partial void OnLokacijaTemplejtChanged();
+        partial void OnImeTempChanging(string value);
+        partial void OnImeTempChanged();
+        #endregion
+
+        public tblTemplejt()
+        {
+            OnCreated();
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_IDTemplejt", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
+        public int IDTemplejt
+        {
+            get
+            {
+                return this._IDTemplejt;
+            }
+            set
+            {
+                if ((this._IDTemplejt != value))
+                {
+                    this.OnIDTemplejtChanging(value);
+                    this.SendPropertyChanging();
+                    this._IDTemplejt = value;
+                    this.SendPropertyChanged("IDTemplejt");
+                    this.OnIDTemplejtChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_LokacijaTemplejt", DbType = "NVarChar(MAX)")]
+        public string LokacijaTemplejt
+        {
+            get
+            {
+                return this._LokacijaTemplejt;
+            }
+            set
+            {
+                if ((this._LokacijaTemplejt != value))
+                {
+                    this.OnLokacijaTemplejtChanging(value);
+                    this.SendPropertyChanging();
+                    this._LokacijaTemplejt = value;
+                    this.SendPropertyChanged("LokacijaTemplejt");
+                    this.OnLokacijaTemplejtChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_ImeTemp", DbType = "NVarChar(50)")]
+        public string ImeTemp
+        {
+            get
+            {
+                return this._ImeTemp;
+            }
+            set
+            {
+                if ((this._ImeTemp != value))
+                {
+                    this.OnImeTempChanging(value);
+                    this.SendPropertyChanging();
+                    this._ImeTemp = value;
+                    this.SendPropertyChanged("ImeTemp");
+                    this.OnImeTempChanged();
+                }
+            }
+        }
+
+        public event PropertyChangingEventHandler PropertyChanging;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void SendPropertyChanging()
+        {
+            if ((this.PropertyChanging != null))
+            {
+                this.PropertyChanging(this, emptyChangingEventArgs);
+            }
+        }
+
+        protected virtual void SendPropertyChanged(String propertyName)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+
+    [global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.Vraboten")]
+    public partial class Vraboten : INotifyPropertyChanging, INotifyPropertyChanged
+    {
+
+        private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+
+        private int _VrabotenID;
+
+        private string _ImeV;
+
+        private string _PrezimeV;
+
+        private string _EmailV;
+
+        private string _TelefonV;
+
+        private bool _StatusV;
+
+        private bool _PotvrdenV;
+
+        private bool _AdminV;
+
+        private string _KorisnickoImeV;
+
+        private string _PasswordV;
+
+        #region Extensibility Method Definitions
+        partial void OnLoaded();
+        partial void OnValidate(System.Data.Linq.ChangeAction action);
+        partial void OnCreated();
+        partial void OnVrabotenIDChanging(int value);
+        partial void OnVrabotenIDChanged();
+        partial void OnImeVChanging(string value);
+        partial void OnImeVChanged();
+        partial void OnPrezimeVChanging(string value);
+        partial void OnPrezimeVChanged();
+        partial void OnEmailVChanging(string value);
+        partial void OnEmailVChanged();
+        partial void OnTelefonVChanging(string value);
+        partial void OnTelefonVChanged();
+        partial void OnStatusVChanging(bool value);
+        partial void OnStatusVChanged();
+        partial void OnPotvrdenVChanging(bool value);
+        partial void OnPotvrdenVChanged();
+        partial void OnAdminVChanging(bool value);
+        partial void OnAdminVChanged();
+        partial void OnKorisnickoImeVChanging(string value);
+        partial void OnKorisnickoImeVChanged();
+        partial void OnPasswordVChanging(string value);
+        partial void OnPasswordVChanged();
+        #endregion
+
+        public Vraboten()
+        {
+            OnCreated();
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_VrabotenID", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
+        public int VrabotenID
+        {
+            get
+            {
+                return this._VrabotenID;
+            }
+            set
+            {
+                if ((this._VrabotenID != value))
+                {
+                    this.OnVrabotenIDChanging(value);
+                    this.SendPropertyChanging();
+                    this._VrabotenID = value;
+                    this.SendPropertyChanged("VrabotenID");
+                    this.OnVrabotenIDChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_ImeV", DbType = "NVarChar(15) NOT NULL", CanBeNull = false)]
+        public string ImeV
+        {
+            get
+            {
+                return this._ImeV;
+            }
+            set
+            {
+                if ((this._ImeV != value))
+                {
+                    this.OnImeVChanging(value);
+                    this.SendPropertyChanging();
+                    this._ImeV = value;
+                    this.SendPropertyChanged("ImeV");
+                    this.OnImeVChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_PrezimeV", DbType = "NVarChar(25) NOT NULL", CanBeNull = false)]
+        public string PrezimeV
+        {
+            get
+            {
+                return this._PrezimeV;
+            }
+            set
+            {
+                if ((this._PrezimeV != value))
+                {
+                    this.OnPrezimeVChanging(value);
+                    this.SendPropertyChanging();
+                    this._PrezimeV = value;
+                    this.SendPropertyChanged("PrezimeV");
+                    this.OnPrezimeVChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_EmailV", DbType = "NVarChar(50) NOT NULL", CanBeNull = false)]
+        public string EmailV
+        {
+            get
+            {
+                return this._EmailV;
+            }
+            set
+            {
+                if ((this._EmailV != value))
+                {
+                    this.OnEmailVChanging(value);
+                    this.SendPropertyChanging();
+                    this._EmailV = value;
+                    this.SendPropertyChanged("EmailV");
+                    this.OnEmailVChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_TelefonV", DbType = "NVarChar(9) NOT NULL", CanBeNull = false)]
+        public string TelefonV
+        {
+            get
+            {
+                return this._TelefonV;
+            }
+            set
+            {
+                if ((this._TelefonV != value))
+                {
+                    this.OnTelefonVChanging(value);
+                    this.SendPropertyChanging();
+                    this._TelefonV = value;
+                    this.SendPropertyChanged("TelefonV");
+                    this.OnTelefonVChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_StatusV", DbType = "Bit NOT NULL")]
+        public bool StatusV
+        {
+            get
+            {
+                return this._StatusV;
+            }
+            set
+            {
+                if ((this._StatusV != value))
+                {
+                    this.OnStatusVChanging(value);
+                    this.SendPropertyChanging();
+                    this._StatusV = value;
+                    this.SendPropertyChanged("StatusV");
+                    this.OnStatusVChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_PotvrdenV", DbType = "Bit NOT NULL")]
+        public bool PotvrdenV
+        {
+            get
+            {
+                return this._PotvrdenV;
+            }
+            set
+            {
+                if ((this._PotvrdenV != value))
+                {
+                    this.OnPotvrdenVChanging(value);
+                    this.SendPropertyChanging();
+                    this._PotvrdenV = value;
+                    this.SendPropertyChanged("PotvrdenV");
+                    this.OnPotvrdenVChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_AdminV", DbType = "Bit NOT NULL")]
+        public bool AdminV
+        {
+            get
+            {
+                return this._AdminV;
+            }
+            set
+            {
+                if ((this._AdminV != value))
+                {
+                    this.OnAdminVChanging(value);
+                    this.SendPropertyChanging();
+                    this._AdminV = value;
+                    this.SendPropertyChanged("AdminV");
+                    this.OnAdminVChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_KorisnickoImeV", DbType = "NVarChar(25) NOT NULL", CanBeNull = false)]
+        public string KorisnickoImeV
+        {
+            get
+            {
+                return this._KorisnickoImeV;
+            }
+            set
+            {
+                if ((this._KorisnickoImeV != value))
+                {
+                    this.OnKorisnickoImeVChanging(value);
+                    this.SendPropertyChanging();
+                    this._KorisnickoImeV = value;
+                    this.SendPropertyChanged("KorisnickoImeV");
+                    this.OnKorisnickoImeVChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_PasswordV", DbType = "NVarChar(25) NOT NULL", CanBeNull = false)]
+        public string PasswordV
+        {
+            get
+            {
+                return this._PasswordV;
+            }
+            set
+            {
+                if ((this._PasswordV != value))
+                {
+                    this.OnPasswordVChanging(value);
+                    this.SendPropertyChanging();
+                    this._PasswordV = value;
+                    this.SendPropertyChanged("PasswordV");
+                    this.OnPasswordVChanged();
+                }
+            }
+        }
+
+        public event PropertyChangingEventHandler PropertyChanging;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void SendPropertyChanging()
+        {
+            if ((this.PropertyChanging != null))
+            {
+                this.PropertyChanging(this, emptyChangingEventArgs);
+            }
+        }
+
+        protected virtual void SendPropertyChanged(String propertyName)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
 }
 #pragma warning restore 1591

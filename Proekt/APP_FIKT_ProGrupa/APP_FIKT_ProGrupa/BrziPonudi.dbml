@@ -13,7 +13,7 @@
       <Column Name="Arhivskibroj" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="BrojNaPonuda" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="IDFirma" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="IDVraboteni" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IDproizvodi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="IDLicaZaKontakt" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="DataZaOdgovor" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="KalendarskaGodina" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
@@ -73,7 +73,7 @@
   </Table>
   <Table Name="dbo.Vraboten" Member="Vrabotens">
     <Type Name="Vraboten">
-      <Column Name="VrabotenID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="proizvodiD" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="ImeV" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
       <Column Name="PrezimeV" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
       <Column Name="EmailV" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />

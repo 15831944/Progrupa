@@ -68,6 +68,12 @@
     <Compile Include="frmNovVraboten.Designer.cs">
       <DependentUpon>frmNovVraboten.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPregProizvod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPregProizvod.Designer.cs">
+      <DependentUpon>frmPregProizvod.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmNovProizvod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNovProizvod.Designer.cs">
+      <DependentUpon>frmNovProizvod.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNovVraboten.resx">
       <DependentUpon>frmNovVraboten.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPregProizvod.resx">
+      <DependentUpon>frmPregProizvod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSignUp.resx">
       <DependentUpon>frmSignUp.cs</DependentUpon>
@@ -115,6 +130,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmNovProizvod.resx">
+      <DependentUpon>frmNovProizvod.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="BrziPonudi.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>BrziPonudi.designer.cs</LastGenOutput>

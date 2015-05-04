@@ -34,11 +34,14 @@
             // 
             // grdPregVrab
             // 
+            this.grdPregVrab.AllowUserToAddRows = false;
+            this.grdPregVrab.AllowUserToDeleteRows = false;
             this.grdPregVrab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdPregVrab.Location = new System.Drawing.Point(12, 38);
             this.grdPregVrab.Name = "grdPregVrab";
             this.grdPregVrab.Size = new System.Drawing.Size(908, 158);
             this.grdPregVrab.TabIndex = 0;
+            this.grdPregVrab.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdPregVrab_CellContentClick);
             // 
             // frmPregVrab
             // 
@@ -47,7 +50,7 @@
             this.ClientSize = new System.Drawing.Size(932, 320);
             this.Controls.Add(this.grdPregVrab);
             this.Name = "frmPregVrab";
-            this.Text = "frmVrabPregStatus";
+            this.Text = "frmPregVrab";
             this.Load += new System.EventHandler(this.frmPregVrab_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdPregVrab)).EndInit();
             this.ResumeLayout(false);

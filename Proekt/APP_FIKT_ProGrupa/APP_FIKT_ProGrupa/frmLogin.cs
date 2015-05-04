@@ -36,10 +36,10 @@ namespace APP_FIKT_ProGrupa
             //доколку има поклопени податоци, најавата е успешна
             if (queryVraboten.Count() > 0)
             {
-                foreach (var vraboten in queryVraboten)
+                foreach (var Vraboten in queryVraboten)
                 {
                     logedIn = true;
-                    frmMenu menuOpen = new frmMenu(vraboten.AdminV, vraboten.VrabotenID);
+                    frmMenu menuOpen = new frmMenu(Vraboten.AdminV, Vraboten.VrabotenID);
                     menuOpen.Show();
                     this.Close();
                 }
