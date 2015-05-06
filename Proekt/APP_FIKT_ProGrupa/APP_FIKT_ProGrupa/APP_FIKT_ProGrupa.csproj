@@ -62,11 +62,23 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNovKlient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNovKlient.Designer.cs">
+      <DependentUpon>frmNovKlient.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNovVraboten.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmNovVraboten.Designer.cs">
       <DependentUpon>frmNovVraboten.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPregKlient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPregKlient.Designer.cs">
+      <DependentUpon>frmPregKlient.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPregProizvod.cs">
       <SubType>Form</SubType>
@@ -106,8 +118,14 @@
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNovKlient.resx">
+      <DependentUpon>frmNovKlient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmNovVraboten.resx">
       <DependentUpon>frmNovVraboten.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPregKlient.resx">
+      <DependentUpon>frmPregKlient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPregProizvod.resx">
       <DependentUpon>frmPregProizvod.cs</DependentUpon>

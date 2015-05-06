@@ -39,7 +39,7 @@
             this.grdPregVrab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdPregVrab.Location = new System.Drawing.Point(12, 38);
             this.grdPregVrab.Name = "grdPregVrab";
-            this.grdPregVrab.Size = new System.Drawing.Size(908, 158);
+            this.grdPregVrab.Size = new System.Drawing.Size(294, 158);
             this.grdPregVrab.TabIndex = 0;
             this.grdPregVrab.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdPregVrab_CellContentClick);
             // 

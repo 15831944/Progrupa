@@ -64,9 +64,15 @@ namespace APP_FIKT_ProGrupa
                         pregProiz.Show();
                         break;
                     }
+                case 7:
+                    {
+                        frmPregKlient pregKlient = new frmPregKlient(this);
+                        pregKlient.Show();
+                        break;
+                    }
                 default:
                     {
-                       MessageBox.Show("Не се пронајдени податоци.", "Нема податоци", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Не се пронајдени податоци.", "Нема податоци", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     }
             }   
@@ -137,6 +143,22 @@ namespace APP_FIKT_ProGrupa
                                         select proizvod);
             if (queryPrikaziProizvod.Count() > 0)
                 prikazi(6);
+            else
+                prikazi(-1);
+        }
+
+        private void mnuVnesiKlient_Click(object sender, EventArgs e)
+        {
+            frmNovKlient novKlient = new frmNovKlient(this);
+            novKlient.Show();
+        }
+
+        private void mnuPregledajKlient_Click(object sender, EventArgs e)
+        {
+            var queryPrikaziKlient = (from klient in context.tblKlientis
+                                        select klient);
+            if (queryPrikaziKlient.Count() > 0)
+                prikazi(7);
             else
                 prikazi(-1);
         }

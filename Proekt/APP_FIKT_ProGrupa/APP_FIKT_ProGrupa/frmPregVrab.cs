@@ -18,7 +18,6 @@ namespace APP_FIKT_ProGrupa
         private int kriterium;
         BrziPonudiDataContext context = new BrziPonudiDataContext();
         
-
         public frmPregVrab(frmMenu parent, int kriterium)
         {
             InitializeComponent();
@@ -55,7 +54,6 @@ namespace APP_FIKT_ProGrupa
                 column = grdPregVrab.Columns[i];
                 dolzinaGrid += column.Width;
             }
-
             this.Width = dolzinaGrid + 60;
             grdPregVrab.Left = 20;
             grdPregVrab.Top = 20;
@@ -109,12 +107,14 @@ namespace APP_FIKT_ProGrupa
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
-                int index = grdPregVrab.CurrentRow.Index;
-                int key = int.Parse(grdPregVrab["VrabotenID", grdPregVrab.CurrentRow.Index].Value.ToString());
+                try
+                {
+                    int index = grdPregVrab.CurrentRow.Index;
+                    int key = int.Parse(grdPregVrab["VrabotenID", grdPregVrab.CurrentRow.Index].Value.ToString());
                 
-                BrziPonudiDataContext context = new BrziPonudiDataContext();
-                Vraboten vrab = context.Vrabotens.Single<Vraboten>(ee => ee.VrabotenID == key);
-
+                    BrziPonudiDataContext context = new BrziPonudiDataContext();
+                    Vraboten vrab = context.Vrabotens.Single<Vraboten>(ee => ee.VrabotenID == key);
+                
                     vrab.ImeV = grdPregVrab["ImeV", index].Value.ToString();
                     vrab.PrezimeV = grdPregVrab["PrezimeV", index].Value.ToString();
                     vrab.EmailV = grdPregVrab["EmailV", index].Value.ToString();
@@ -126,13 +126,13 @@ namespace APP_FIKT_ProGrupa
                     vrab.PasswordV = grdPregVrab["PasswordV", index].Value.ToString();
                     // Insert any additional changes to column values.
 
-                try
-                {
+                
                     context.SubmitChanges();
+                    MessageBox.Show("Податоците за вработениот " + grdPregVrab["ImeV", index].Value.ToString()+" се успешно променети!", "Успешна промена", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    MessageBox.Show(ex.ToString());
+                    MessageBox.Show("Внесени се невалидни податоци и промените за вработениот нема да бидат зачувани!", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     // Provide for exceptions.
                 }
             }

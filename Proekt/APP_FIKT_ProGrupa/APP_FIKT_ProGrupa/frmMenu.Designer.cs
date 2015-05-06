@@ -37,13 +37,13 @@
             this.mnuVraboten = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuVnesiVraboten = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPregledajVraboten = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuproizNepotvrdeni = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuproizPotvrdeni = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuVrabNepotvrdeni = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuVrabPotvrdeni = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
-            this.mnuPregproizStatus = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuPregproizAktivni = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuPregproizPasivni = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuproizAll = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuPregVrabStatus = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuPregVrabAktivni = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuPregVrabPasivni = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuVrabAll = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuKlient = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuVnesiKlient = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuIzmeniKlient = new System.Windows.Forms.ToolStripMenuItem();
@@ -123,63 +123,63 @@
             // mnuPregledajVraboten
             // 
             this.mnuPregledajVraboten.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuproizNepotvrdeni,
-            this.mnuproizPotvrdeni,
+            this.mnuVrabNepotvrdeni,
+            this.mnuVrabPotvrdeni,
             this.toolStripMenuItem3,
-            this.mnuPregproizStatus,
-            this.mnuproizAll});
+            this.mnuPregVrabStatus,
+            this.mnuVrabAll});
             this.mnuPregledajVraboten.Name = "mnuPregledajVraboten";
             this.mnuPregledajVraboten.Size = new System.Drawing.Size(190, 22);
             this.mnuPregledajVraboten.Text = "Прегледај вработени";
             // 
-            // mnuproizNepotvrdeni
+            // mnuVrabNepotvrdeni
             // 
-            this.mnuproizNepotvrdeni.Name = "mnuproizNepotvrdeni";
-            this.mnuproizNepotvrdeni.Size = new System.Drawing.Size(161, 22);
-            this.mnuproizNepotvrdeni.Text = "Непотврдени";
-            this.mnuproizNepotvrdeni.Click += new System.EventHandler(this.mnuproizNepotvrdeni_Click);
+            this.mnuVrabNepotvrdeni.Name = "mnuVrabNepotvrdeni";
+            this.mnuVrabNepotvrdeni.Size = new System.Drawing.Size(161, 22);
+            this.mnuVrabNepotvrdeni.Text = "Непотврдени";
+            this.mnuVrabNepotvrdeni.Click += new System.EventHandler(this.mnuproizNepotvrdeni_Click);
             // 
-            // mnuproizPotvrdeni
+            // mnuVrabPotvrdeni
             // 
-            this.mnuproizPotvrdeni.Name = "mnuproizPotvrdeni";
-            this.mnuproizPotvrdeni.Size = new System.Drawing.Size(161, 22);
-            this.mnuproizPotvrdeni.Text = "Потврдени";
-            this.mnuproizPotvrdeni.Click += new System.EventHandler(this.mnuproizPotvrdeni_Click);
+            this.mnuVrabPotvrdeni.Name = "mnuVrabPotvrdeni";
+            this.mnuVrabPotvrdeni.Size = new System.Drawing.Size(161, 22);
+            this.mnuVrabPotvrdeni.Text = "Потврдени";
+            this.mnuVrabPotvrdeni.Click += new System.EventHandler(this.mnuproizPotvrdeni_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(158, 6);
             // 
-            // mnuPregproizStatus
+            // mnuPregVrabStatus
             // 
-            this.mnuPregproizStatus.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuPregproizAktivni,
-            this.mnuPregproizPasivni});
-            this.mnuPregproizStatus.Name = "mnuPregproizStatus";
-            this.mnuPregproizStatus.Size = new System.Drawing.Size(161, 22);
-            this.mnuPregproizStatus.Text = "По статус";
+            this.mnuPregVrabStatus.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuPregVrabAktivni,
+            this.mnuPregVrabPasivni});
+            this.mnuPregVrabStatus.Name = "mnuPregVrabStatus";
+            this.mnuPregVrabStatus.Size = new System.Drawing.Size(161, 22);
+            this.mnuPregVrabStatus.Text = "По статус";
             // 
-            // mnuPregproizAktivni
+            // mnuPregVrabAktivni
             // 
-            this.mnuPregproizAktivni.Name = "mnuPregproizAktivni";
-            this.mnuPregproizAktivni.Size = new System.Drawing.Size(122, 22);
-            this.mnuPregproizAktivni.Text = "Активни";
-            this.mnuPregproizAktivni.Click += new System.EventHandler(this.mnuPregproizAktivni_Click);
+            this.mnuPregVrabAktivni.Name = "mnuPregVrabAktivni";
+            this.mnuPregVrabAktivni.Size = new System.Drawing.Size(152, 22);
+            this.mnuPregVrabAktivni.Text = "Активни";
+            this.mnuPregVrabAktivni.Click += new System.EventHandler(this.mnuPregproizAktivni_Click);
             // 
-            // mnuPregproizPasivni
+            // mnuPregVrabPasivni
             // 
-            this.mnuPregproizPasivni.Name = "mnuPregproizPasivni";
-            this.mnuPregproizPasivni.Size = new System.Drawing.Size(122, 22);
-            this.mnuPregproizPasivni.Text = "Пасивни";
-            this.mnuPregproizPasivni.Click += new System.EventHandler(this.mnuPregproizPasivni_Click);
+            this.mnuPregVrabPasivni.Name = "mnuPregVrabPasivni";
+            this.mnuPregVrabPasivni.Size = new System.Drawing.Size(152, 22);
+            this.mnuPregVrabPasivni.Text = "Пасивни";
+            this.mnuPregVrabPasivni.Click += new System.EventHandler(this.mnuPregproizPasivni_Click);
             // 
-            // mnuproizAll
+            // mnuVrabAll
             // 
-            this.mnuproizAll.Name = "mnuproizAll";
-            this.mnuproizAll.Size = new System.Drawing.Size(161, 22);
-            this.mnuproizAll.Text = "Сите вработени";
-            this.mnuproizAll.Click += new System.EventHandler(this.mnuproizAll_Click);
+            this.mnuVrabAll.Name = "mnuVrabAll";
+            this.mnuVrabAll.Size = new System.Drawing.Size(161, 22);
+            this.mnuVrabAll.Text = "Сите вработени";
+            this.mnuVrabAll.Click += new System.EventHandler(this.mnuproizAll_Click);
             // 
             // mnuKlient
             // 
@@ -199,6 +199,7 @@
             this.mnuVnesiKlient.Name = "mnuVnesiKlient";
             this.mnuVnesiKlient.Size = new System.Drawing.Size(239, 22);
             this.mnuVnesiKlient.Text = "Внеси клиент";
+            this.mnuVnesiKlient.Click += new System.EventHandler(this.mnuVnesiKlient_Click);
             // 
             // mnuIzmeniKlient
             // 
@@ -211,6 +212,7 @@
             this.mnuPregledajKlient.Name = "mnuPregledajKlient";
             this.mnuPregledajKlient.Size = new System.Drawing.Size(239, 22);
             this.mnuPregledajKlient.Text = "Прегледај клиент";
+            this.mnuPregledajKlient.Click += new System.EventHandler(this.mnuPregledajKlient_Click);
             // 
             // mnuPregledajPonKlient
             // 
@@ -293,12 +295,12 @@
         private System.Windows.Forms.ToolStripMenuItem mnuProizvod;
         private System.Windows.Forms.ToolStripMenuItem mnuVnesiProizvod;
         private System.Windows.Forms.ToolStripMenuItem mnuPrikaziProizvod;
-        private System.Windows.Forms.ToolStripMenuItem mnuPregproizStatus;
-        private System.Windows.Forms.ToolStripMenuItem mnuPregproizAktivni;
-        private System.Windows.Forms.ToolStripMenuItem mnuPregproizPasivni;
-        private System.Windows.Forms.ToolStripMenuItem mnuproizNepotvrdeni;
-        private System.Windows.Forms.ToolStripMenuItem mnuproizPotvrdeni;
+        private System.Windows.Forms.ToolStripMenuItem mnuPregVrabStatus;
+        private System.Windows.Forms.ToolStripMenuItem mnuPregVrabAktivni;
+        private System.Windows.Forms.ToolStripMenuItem mnuPregVrabPasivni;
+        private System.Windows.Forms.ToolStripMenuItem mnuVrabNepotvrdeni;
+        private System.Windows.Forms.ToolStripMenuItem mnuVrabPotvrdeni;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem mnuproizAll;
+        private System.Windows.Forms.ToolStripMenuItem mnuVrabAll;
     }
 }

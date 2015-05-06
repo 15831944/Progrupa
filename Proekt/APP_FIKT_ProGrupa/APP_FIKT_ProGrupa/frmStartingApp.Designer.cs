@@ -34,7 +34,6 @@
             this.lblMentor = new System.Windows.Forms.Label();
             this.lblFirma = new System.Windows.Forms.Label();
             this.lblIzrabotil1 = new System.Windows.Forms.Label();
-            this.lblIzrabotil2 = new System.Windows.Forms.Label();
             this.lblIzrabotil3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -73,26 +72,13 @@
             this.lblIzrabotil1.AutoSize = true;
             this.lblIzrabotil1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.lblIzrabotil1.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblIzrabotil1.Location = new System.Drawing.Point(104, 214);
+            this.lblIzrabotil1.Location = new System.Drawing.Point(104, 225);
             this.lblIzrabotil1.Name = "lblIzrabotil1";
             this.lblIzrabotil1.Size = new System.Drawing.Size(168, 13);
             this.lblIzrabotil1.TabIndex = 2;
             this.lblIzrabotil1.Text = "Изработиле: Златко Петковски";
             this.lblIzrabotil1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.lblIzrabotil1.Visible = false;
-            // 
-            // lblIzrabotil2
-            // 
-            this.lblIzrabotil2.AutoSize = true;
-            this.lblIzrabotil2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
-            this.lblIzrabotil2.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblIzrabotil2.Location = new System.Drawing.Point(159, 227);
-            this.lblIzrabotil2.Name = "lblIzrabotil2";
-            this.lblIzrabotil2.Size = new System.Drawing.Size(113, 13);
-            this.lblIzrabotil2.TabIndex = 3;
-            this.lblIzrabotil2.Text = "??Тоде Ангелоски??";
-            this.lblIzrabotil2.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.lblIzrabotil2.Visible = false;
             // 
             // lblIzrabotil3
             // 
@@ -116,7 +102,6 @@
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.ControlBox = false;
             this.Controls.Add(this.lblIzrabotil3);
-            this.Controls.Add(this.lblIzrabotil2);
             this.Controls.Add(this.lblIzrabotil1);
             this.Controls.Add(this.lblFirma);
             this.Controls.Add(this.lblMentor);
@@ -139,7 +124,6 @@
         private System.Windows.Forms.Label lblMentor;
         private System.Windows.Forms.Label lblFirma;
         private System.Windows.Forms.Label lblIzrabotil1;
-        private System.Windows.Forms.Label lblIzrabotil2;
         private System.Windows.Forms.Label lblIzrabotil3;
     }
 }

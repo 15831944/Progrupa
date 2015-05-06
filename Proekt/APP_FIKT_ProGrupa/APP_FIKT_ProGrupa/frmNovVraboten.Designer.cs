@@ -247,7 +247,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtIme);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmNovVraboten";
             this.Text = "Внеси нов вработен";
             this.ResumeLayout(false);

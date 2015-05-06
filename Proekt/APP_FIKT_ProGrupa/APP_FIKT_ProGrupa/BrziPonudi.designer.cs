@@ -791,7 +791,7 @@ namespace APP_FIKT_ProGrupa
 
         private string _Komentar;
 
-        private System.Nullable<bool> _Status;
+        private bool _Status;
 
         #region Extensibility Method Definitions
         partial void OnLoaded();
@@ -983,7 +983,7 @@ namespace APP_FIKT_ProGrupa
         }
 
         [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Status", DbType = "Bit")]
-        public System.Nullable<bool> Status
+        public bool Status
         {
             get
             {
