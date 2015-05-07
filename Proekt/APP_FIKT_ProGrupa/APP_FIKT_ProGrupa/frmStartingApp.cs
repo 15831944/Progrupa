@@ -35,7 +35,6 @@ namespace APP_FIKT_ProGrupa
             {
                 lblFirma.Visible = false;
                 lblIzrabotil1.Visible = true;
-                lblIzrabotil2.Visible = true;
                 lblIzrabotil3.Visible = true;
             }
             else

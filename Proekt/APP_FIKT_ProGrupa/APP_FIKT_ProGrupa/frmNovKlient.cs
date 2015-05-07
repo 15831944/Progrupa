@@ -113,6 +113,7 @@ namespace APP_FIKT_ProGrupa
 
         private void btnConfirmL_Click(object sender, EventArgs e)
         {
+            BrziPonudiDataContext context = new BrziPonudiDataContext();
             bool flag = false;
             int idFirma = ((from id in context.tblKlientis
                                     where id.ImeFirma == txtIme.Text
