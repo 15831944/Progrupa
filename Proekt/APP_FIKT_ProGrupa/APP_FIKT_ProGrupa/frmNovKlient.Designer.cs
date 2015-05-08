@@ -30,9 +30,18 @@
         {
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.grdLicaKontakt = new System.Windows.Forms.DataGridView();
             this.btnConfirmL = new System.Windows.Forms.Button();
+            this.grdLicaKontakt = new System.Windows.Forms.DataGridView();
+            this.Ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pozicija = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Komentar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtKomentar = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnConfirmK = new System.Windows.Forms.Button();
             this.txtWebPage = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,15 +53,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtIme = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pozicija = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Komentar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtKomentar = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtGrad = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdLicaKontakt)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -73,12 +75,22 @@
             this.groupBox1.Controls.Add(this.btnConfirmL);
             this.groupBox1.Controls.Add(this.grdLicaKontakt);
             this.groupBox1.Enabled = false;
-            this.groupBox1.Location = new System.Drawing.Point(16, 133);
+            this.groupBox1.Location = new System.Drawing.Point(16, 178);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(813, 177);
-            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Лица за контакт";
+            // 
+            // btnConfirmL
+            // 
+            this.btnConfirmL.Location = new System.Drawing.Point(292, 140);
+            this.btnConfirmL.Name = "btnConfirmL";
+            this.btnConfirmL.Size = new System.Drawing.Size(186, 23);
+            this.btnConfirmL.TabIndex = 19;
+            this.btnConfirmL.Text = "Внеси лица за контакт";
+            this.btnConfirmL.UseVisualStyleBackColor = true;
+            this.btnConfirmL.Click += new System.EventHandler(this.btnConfirmL_Click);
             // 
             // grdLicaKontakt
             // 
@@ -94,131 +106,7 @@
             this.grdLicaKontakt.Location = new System.Drawing.Point(12, 19);
             this.grdLicaKontakt.Name = "grdLicaKontakt";
             this.grdLicaKontakt.Size = new System.Drawing.Size(766, 115);
-            this.grdLicaKontakt.TabIndex = 17;
-            // 
-            // btnConfirmL
-            // 
-            this.btnConfirmL.Location = new System.Drawing.Point(292, 140);
-            this.btnConfirmL.Name = "btnConfirmL";
-            this.btnConfirmL.Size = new System.Drawing.Size(186, 23);
-            this.btnConfirmL.TabIndex = 28;
-            this.btnConfirmL.Text = "Внеси лица за контакт";
-            this.btnConfirmL.UseVisualStyleBackColor = true;
-            this.btnConfirmL.Click += new System.EventHandler(this.btnConfirmL_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.txtKomentar);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.btnConfirmK);
-            this.groupBox2.Controls.Add(this.txtWebPage);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.txtMail);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.txtTelefon);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.txtAdresa);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.txtIme);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(16, 39);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(813, 89);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Клиенти";
-            // 
-            // btnConfirmK
-            // 
-            this.btnConfirmK.Location = new System.Drawing.Point(661, 53);
-            this.btnConfirmK.Name = "btnConfirmK";
-            this.btnConfirmK.Size = new System.Drawing.Size(116, 23);
-            this.btnConfirmK.TabIndex = 15;
-            this.btnConfirmK.Text = "Внеси клиент";
-            this.btnConfirmK.UseVisualStyleBackColor = true;
-            this.btnConfirmK.Click += new System.EventHandler(this.btnConfirmK_Click);
-            // 
-            // txtWebPage
-            // 
-            this.txtWebPage.Location = new System.Drawing.Point(87, 55);
-            this.txtWebPage.Name = "txtWebPage";
-            this.txtWebPage.Size = new System.Drawing.Size(117, 20);
-            this.txtWebPage.TabIndex = 13;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 58);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Веб страна";
-            // 
-            // txtMail
-            // 
-            this.txtMail.Location = new System.Drawing.Point(661, 24);
-            this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(116, 20);
-            this.txtMail.TabIndex = 12;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(612, 27);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Е-маил";
-            // 
-            // txtTelefon
-            // 
-            this.txtTelefon.Location = new System.Drawing.Point(475, 24);
-            this.txtTelefon.Name = "txtTelefon";
-            this.txtTelefon.Size = new System.Drawing.Size(117, 20);
-            this.txtTelefon.TabIndex = 11;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(416, 27);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Телефон";
-            // 
-            // txtAdresa
-            // 
-            this.txtAdresa.AccessibleDescription = "/";
-            this.txtAdresa.Location = new System.Drawing.Point(291, 24);
-            this.txtAdresa.Name = "txtAdresa";
-            this.txtAdresa.Size = new System.Drawing.Size(117, 20);
-            this.txtAdresa.TabIndex = 10;
-            // 
-            // label2
-            // 
-            this.label2.AccessibleDescription = "//";
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(237, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Адреса";
-            // 
-            // txtIme
-            // 
-            this.txtIme.Location = new System.Drawing.Point(87, 24);
-            this.txtIme.Name = "txtIme";
-            this.txtIme.Size = new System.Drawing.Size(117, 20);
-            this.txtIme.TabIndex = 9;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Име";
+            this.grdLicaKontakt.TabIndex = 18;
             // 
             // Ime
             // 
@@ -255,27 +143,161 @@
             this.Komentar.HeaderText = "Коментар";
             this.Komentar.Name = "Komentar";
             // 
-            // label6
+            // groupBox2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(222, 58);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Коментар";
+            this.groupBox2.Controls.Add(this.txtGrad);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.txtKomentar);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.btnConfirmK);
+            this.groupBox2.Controls.Add(this.txtWebPage);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.txtMail);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.txtTelefon);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.txtAdresa);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.txtIme);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Location = new System.Drawing.Point(16, 39);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(813, 122);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Клиенти";
             // 
             // txtKomentar
             // 
-            this.txtKomentar.Location = new System.Drawing.Point(291, 55);
+            this.txtKomentar.Location = new System.Drawing.Point(87, 87);
             this.txtKomentar.Name = "txtKomentar";
-            this.txtKomentar.Size = new System.Drawing.Size(301, 20);
-            this.txtKomentar.TabIndex = 14;
+            this.txtKomentar.Size = new System.Drawing.Size(497, 20);
+            this.txtKomentar.TabIndex = 15;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(15, 90);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Коментар";
+            // 
+            // btnConfirmK
+            // 
+            this.btnConfirmK.Location = new System.Drawing.Point(666, 85);
+            this.btnConfirmK.Name = "btnConfirmK";
+            this.btnConfirmK.Size = new System.Drawing.Size(116, 23);
+            this.btnConfirmK.TabIndex = 16;
+            this.btnConfirmK.Text = "Внеси клиент";
+            this.btnConfirmK.UseVisualStyleBackColor = true;
+            this.btnConfirmK.Click += new System.EventHandler(this.btnConfirmK_Click);
+            // 
+            // txtWebPage
+            // 
+            this.txtWebPage.Location = new System.Drawing.Point(292, 55);
+            this.txtWebPage.Name = "txtWebPage";
+            this.txtWebPage.Size = new System.Drawing.Size(117, 20);
+            this.txtWebPage.TabIndex = 14;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(218, 58);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Веб страна";
+            // 
+            // txtMail
+            // 
+            this.txtMail.Location = new System.Drawing.Point(87, 55);
+            this.txtMail.Name = "txtMail";
+            this.txtMail.Size = new System.Drawing.Size(116, 20);
+            this.txtMail.TabIndex = 13;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(15, 58);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Е-маил";
+            // 
+            // txtTelefon
+            // 
+            this.txtTelefon.Location = new System.Drawing.Point(665, 24);
+            this.txtTelefon.Name = "txtTelefon";
+            this.txtTelefon.Size = new System.Drawing.Size(117, 20);
+            this.txtTelefon.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(606, 27);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Телефон";
+            // 
+            // txtAdresa
+            // 
+            this.txtAdresa.AccessibleDescription = "/";
+            this.txtAdresa.Location = new System.Drawing.Point(292, 24);
+            this.txtAdresa.Name = "txtAdresa";
+            this.txtAdresa.Size = new System.Drawing.Size(117, 20);
+            this.txtAdresa.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.AccessibleDescription = "//";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(218, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Адреса";
+            // 
+            // txtIme
+            // 
+            this.txtIme.Location = new System.Drawing.Point(87, 24);
+            this.txtIme.Name = "txtIme";
+            this.txtIme.Size = new System.Drawing.Size(117, 20);
+            this.txtIme.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Име";
+            // 
+            // label7
+            // 
+            this.label7.AccessibleDescription = "//";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(428, 27);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 13);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Град";
+            // 
+            // txtGrad
+            // 
+            this.txtGrad.AccessibleDescription = "/";
+            this.txtGrad.Location = new System.Drawing.Point(467, 24);
+            this.txtGrad.Name = "txtGrad";
+            this.txtGrad.Size = new System.Drawing.Size(117, 20);
+            this.txtGrad.TabIndex = 11;
             // 
             // frmNovKlient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(841, 322);
+            this.ClientSize = new System.Drawing.Size(841, 377);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label8);
@@ -317,5 +339,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Komentar;
         private System.Windows.Forms.TextBox txtKomentar;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtGrad;
+        private System.Windows.Forms.Label label7;
     }
 }

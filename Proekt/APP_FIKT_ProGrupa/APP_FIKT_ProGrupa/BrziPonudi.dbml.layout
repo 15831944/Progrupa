@@ -2,52 +2,52 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="BrziPonudi">
   <DataContextMoniker Name="/BrziPonudiDataContext" />
   <nestedChildShapes>
-    <classShape Id="59474874-33ae-4ba9-a770-944a63d4256d" isExpanded="false" absoluteBounds="2.875, 1, 2, 0.45">
+    <classShape Id="762ebe2d-3a9b-4c2c-86fc-8c91a2355a4f" isExpanded="false" absoluteBounds="0.5, 0.5, 2, 0.45">
       <DataClassMoniker Name="/BrziPonudiDataContext/tblArhiva" />
       <nestedChildShapes>
-        <elementListCompartment Id="f48f0a09-b277-44da-ac6c-e2be41eea989" absoluteBounds="2.89, 1.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="dd2b3c19-d588-476b-9771-90b5f7a3ff73" absoluteBounds="0.515, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="d078a455-a7ac-44a6-a6f3-533023a90c13" isExpanded="false" absoluteBounds="2.875, 0.5, 2, 0.45">
+    <classShape Id="c3093adc-4185-4093-b634-fc4d0727dd5b" isExpanded="false" absoluteBounds="0.5, 1, 2, 0.45">
       <DataClassMoniker Name="/BrziPonudiDataContext/tblDokumenti" />
       <nestedChildShapes>
-        <elementListCompartment Id="5d66101b-b5dc-47e2-a016-73d68786944e" absoluteBounds="2.89, 0.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="8c8238d1-32ab-4890-a20f-0f073f26d5d1" absoluteBounds="0.515, 1.46, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="6a05047e-0242-4d67-a464-1cc13ab496b4" isExpanded="false" absoluteBounds="0.5, 0.5, 2, 0.45">
+    <classShape Id="1a2e2398-0560-472f-8e12-267036deed11" isExpanded="false" absoluteBounds="4.125, 0.5, 2, 0.45">
       <DataClassMoniker Name="/BrziPonudiDataContext/tblKlienti" />
       <nestedChildShapes>
-        <elementListCompartment Id="1f320974-844f-41f3-8fb0-921359c055de" absoluteBounds="0.515, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="f968a2ef-d260-425b-80fb-97f001cb8ba0" absoluteBounds="4.1400000000000006, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="2af6abfe-47c8-40c4-afad-34215ec44499" isExpanded="false" absoluteBounds="0.5, 1, 2, 0.45">
-      <DataClassMoniker Name="/BrziPonudiDataContext/tblLicaKontakt" />
-      <nestedChildShapes>
-        <elementListCompartment Id="b3da3cca-fc0a-4f1f-8e88-45c905999a2d" absoluteBounds="0.515, 1.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="30418bf8-8abe-4a22-b5d8-acf387f28cb9" isExpanded="false" absoluteBounds="2.875, 2.5, 2, 0.45">
+    <classShape Id="10ec0d99-481b-4f14-b0ee-0dcc5e254e82" isExpanded="false" absoluteBounds="0.5, 2.25, 2, 0.45">
       <DataClassMoniker Name="/BrziPonudiDataContext/tblProizvodi" />
       <nestedChildShapes>
-        <elementListCompartment Id="d2299176-20db-40a2-996d-b4cd77f0ec13" absoluteBounds="2.89, 2.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="ab357eec-b710-4131-9e23-78a603d369b7" absoluteBounds="0.515, 2.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="5fa2e3d2-0889-4265-bb7b-05101a5f193e" isExpanded="false" absoluteBounds="2.875, 3, 2, 0.45">
+    <classShape Id="80781214-52dd-485e-8e10-5a0f550d7999" isExpanded="false" absoluteBounds="0.5, 2.75, 2, 0.45">
       <DataClassMoniker Name="/BrziPonudiDataContext/tblStavka" />
       <nestedChildShapes>
-        <elementListCompartment Id="9a3a68f9-f1cb-4abb-9131-97e6b1c3df64" absoluteBounds="2.89, 3.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="657773d7-8d39-47c0-aa08-2e59d6e2abbb" absoluteBounds="0.51500000000000012, 3.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="52e5de6e-6a65-409e-8fdd-9e7448672cc0" isExpanded="false" absoluteBounds="2.875, 2, 2, 0.45">
+    <classShape Id="27d58d28-8095-4d04-8c8b-8be458ddd9f8" isExpanded="false" absoluteBounds="0.5, 1.5, 2, 0.45">
       <DataClassMoniker Name="/BrziPonudiDataContext/tblTemplejt" />
       <nestedChildShapes>
-        <elementListCompartment Id="2c9d5c13-ffbd-4f5a-8c36-f90686ce8070" absoluteBounds="2.89, 2.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="ceb0b26b-b074-4c5d-9d70-61ff482d81f3" absoluteBounds="0.51500000000000012, 1.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="4a533d03-7bdf-492f-b3e6-9ef862b493bc" isExpanded="false" absoluteBounds="0.625, 2, 2, 0.45">
+    <classShape Id="8541c899-baf7-4fba-9248-123983f3a0be" isExpanded="false" absoluteBounds="4.25, 2.625, 2, 0.45">
       <DataClassMoniker Name="/BrziPonudiDataContext/Vraboten" />
       <nestedChildShapes>
-        <elementListCompartment Id="db3a03bb-b37f-468d-8f9e-acf823d40076" absoluteBounds="0.64, 2.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="ad10a4f2-712a-4381-9ac4-a0007b8b193d" absoluteBounds="4.265, 3.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="68f5b278-3c81-4e9d-a456-53b9b6179078" isExpanded="false" absoluteBounds="4.125, 1, 2, 0.45">
+      <DataClassMoniker Name="/BrziPonudiDataContext/tblLicaKontakt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ca06f150-eb7b-4ec3-bff0-14960ec8fb79" absoluteBounds="4.14, 1.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

@@ -13,7 +13,7 @@
       <Column Name="Arhivskibroj" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="BrojNaPonuda" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="IDFirma" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="IDproizvodi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IDVraboteni" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="IDLicaZaKontakt" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="DataZaOdgovor" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="KalendarskaGodina" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
@@ -27,23 +27,11 @@
       <Column Name="IDFirma" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="ImeFirma" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Adresa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Grad" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Telefon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="webstrana" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="komentar" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tblLicaKontakt" Member="tblLicaKontakts">
-    <Type Name="tblLicaKontakt">
-      <Column Name="IDLicaZaKontakt" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="IDFirma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Ime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Prezime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Pozicija" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Telefon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Komentar" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tblProizvodi" Member="tblProizvodis">
@@ -73,16 +61,29 @@
   </Table>
   <Table Name="dbo.Vraboten" Member="Vrabotens">
     <Type Name="Vraboten">
-      <Column Name="proizvodiD" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="ImeV" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
-      <Column Name="PrezimeV" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
-      <Column Name="EmailV" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="TelefonV" Type="System.String" DbType="NVarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="VrabotenID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ImeV" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="PrezimeV" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="EmailV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TelefonV" Type="System.String" DbType="NVarChar(9)" CanBeNull="true" />
       <Column Name="StatusV" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="PotvrdenV" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="AdminV" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="KorisnickoImeV" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
-      <Column Name="PasswordV" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="KorisnickoImeV" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="PasswordV" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblLicaKontakt" Member="tblLicaKontakts">
+    <Type Name="tblLicaKontakt">
+      <Column Name="IDLicaZaKontakt" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDFirma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Prezime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Pozicija" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Telefon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Komentar" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

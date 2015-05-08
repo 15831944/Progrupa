@@ -34,10 +34,11 @@ namespace APP_FIKT_ProGrupa
             grdPregKlient.Columns[0].HeaderText = "Шифра";
             grdPregKlient.Columns[1].HeaderText = "Име";
             grdPregKlient.Columns[2].HeaderText = "Адреса";
-            grdPregKlient.Columns[3].HeaderText = "Телефон";
-            grdPregKlient.Columns[4].HeaderText = "Е-маил";
-            grdPregKlient.Columns[5].HeaderText = "Веб страна";
-            grdPregKlient.Columns[6].HeaderText = "Коментар";
+            grdPregKlient.Columns[3].HeaderText = "Град";
+            grdPregKlient.Columns[4].HeaderText = "Телефон";
+            grdPregKlient.Columns[5].HeaderText = "Е-маил";
+            grdPregKlient.Columns[6].HeaderText = "Веб страна";
+            grdPregKlient.Columns[7].HeaderText = "Коментар";
             grdPregKlient.Columns[0].ReadOnly = true;
 
             grdPregLicaKontakt.Columns[0].HeaderText = "Шифра";
@@ -82,8 +83,7 @@ namespace APP_FIKT_ProGrupa
             this.Width = dolzinaGrid + 60;
             grdPregLicaKontakt.Left = 20;
             grdPregLicaKontakt.Width = dolzinaGrid;
-            dolzinaGrid -= column.Width;
-            grdPregKlient.Left = 20 + column.Width / 2;
+            grdPregKlient.Left = 20;
             grdPregKlient.Width = dolzinaGrid;
 
         }
@@ -198,19 +198,20 @@ namespace APP_FIKT_ProGrupa
                 try
                 {
                     int index = grdPregKlient.CurrentRow.Index;
-                    int key = int.Parse(grdPregKlient["IDLicaZaKontakt", grdPregKlient.CurrentRow.Index].Value.ToString());
+                    int key = int.Parse(grdPregKlient["IDFirma", grdPregKlient.CurrentRow.Index].Value.ToString());
 
                     var kl = context.tblKlientis.Single<tblKlienti>(ee => ee.IDFirma== key);
                    
                     //???  незнам зошто со индекс 7 го зема телефонскиот број наместо коментарот
-                    if (grdPregKlient[6, index].Value == null || grdPregKlient[6, index].Value.ToString() == string.Empty)//ToString()????
+                    if (grdPregKlient[9, index].Value == null || grdPregKlient[9, index].Value.ToString() == string.Empty)//ToString()????
                         komentar = "Нема коментар";
                     else
-                        komentar = grdPregKlient[6, index].Value.ToString();
+                        komentar = grdPregKlient[9, index].Value.ToString();
 
 
                     kl.ImeFirma = grdPregKlient["ImeFirma", index].Value.ToString();
                     kl.Adresa = grdPregKlient["Adresa", index].Value.ToString();
+                    kl.Grad = grdPregKlient["Grad", index].Value.ToString();
                     kl.Telefon = grdPregKlient["Telefon", index].Value.ToString();
                     kl.Email = grdPregKlient["Email", index].Value.ToString();
                     kl.webstrana = grdPregKlient["webstrana", index].Value.ToString();
@@ -218,10 +219,11 @@ namespace APP_FIKT_ProGrupa
                     // Insert any additional changes to column values.
 
                     context.SubmitChanges();
-                    MessageBox.Show("Податоците за лицето " + grdPregLicaKontakt["Ime", index].Value.ToString() + " се успешно променети!", "Успешна промена", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Податоците за фирмата " + grdPregLicaKontakt["ImeFirma", index].Value.ToString() + " се успешно променети!", "Успешна промена", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
+                    MessageBox.Show(ex.ToString());
                     MessageBox.Show("Внесени се невалидни податоци и промените за лицето нема да бидат зачувани!", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     // Provide for exceptions.
                 }

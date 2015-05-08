@@ -23,6 +23,7 @@ namespace APP_FIKT_ProGrupa
         {
             txtIme.Text = "";
             txtAdresa.Text = "";
+            txtGrad.Text = "";
             txtMail.Text = "";
             txtTelefon.Text = "";
             txtWebPage.Text = "";
@@ -49,6 +50,12 @@ namespace APP_FIKT_ProGrupa
                 MessageBox.Show("Внесени се невалидни податоци!", "Невалидни податоци", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 flag = true;
                 txtAdresa.Focus();
+            }
+            else if (txtGrad.Text == "" || txtGrad.Text[0] == ' ')
+            {
+                MessageBox.Show("Внесени се невалидни податоци!", "Невалидни податоци", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = true;
+                txtGrad.Focus();
             }
             else if (txtTelefon.Text == "" || txtTelefon.Text[0] == ' ')
             {
@@ -97,6 +104,7 @@ namespace APP_FIKT_ProGrupa
                     {
                         ImeFirma = txtIme.Text,
                         Adresa = txtAdresa.Text,
+                        Grad = txtGrad.Text,
                         Telefon = txtTelefon.Text,
                         Email = txtMail.Text,
                         webstrana = txtWebPage.Text,

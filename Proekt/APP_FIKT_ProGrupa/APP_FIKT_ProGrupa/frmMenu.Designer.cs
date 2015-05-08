@@ -86,6 +86,7 @@
             this.mnuKreirajPonuda.Name = "mnuKreirajPonuda";
             this.mnuKreirajPonuda.Size = new System.Drawing.Size(179, 22);
             this.mnuKreirajPonuda.Text = "Креирај понуда";
+            this.mnuKreirajPonuda.Click += new System.EventHandler(this.mnuKreirajPonuda_Click);
             // 
             // mnuPregledajPonuda
             // 
@@ -163,14 +164,14 @@
             // mnuPregVrabAktivni
             // 
             this.mnuPregVrabAktivni.Name = "mnuPregVrabAktivni";
-            this.mnuPregVrabAktivni.Size = new System.Drawing.Size(152, 22);
+            this.mnuPregVrabAktivni.Size = new System.Drawing.Size(122, 22);
             this.mnuPregVrabAktivni.Text = "Активни";
             this.mnuPregVrabAktivni.Click += new System.EventHandler(this.mnuPregproizAktivni_Click);
             // 
             // mnuPregVrabPasivni
             // 
             this.mnuPregVrabPasivni.Name = "mnuPregVrabPasivni";
-            this.mnuPregVrabPasivni.Size = new System.Drawing.Size(152, 22);
+            this.mnuPregVrabPasivni.Size = new System.Drawing.Size(122, 22);
             this.mnuPregVrabPasivni.Text = "Пасивни";
             this.mnuPregVrabPasivni.Click += new System.EventHandler(this.mnuPregproizPasivni_Click);
             // 

@@ -13,9 +13,11 @@ namespace APP_FIKT_ProGrupa
     public partial class frmMenu : Form
     {
         bool admin;
+        int vrabotenID;
         BrziPonudiDataContext context = new BrziPonudiDataContext();
-        public frmMenu(bool admin, int proizvodiD)
+        public frmMenu(bool admin, int vrabotenID)
         {
+            this.vrabotenID = vrabotenID;
             this.admin = admin;
             InitializeComponent();
         }
@@ -161,6 +163,12 @@ namespace APP_FIKT_ProGrupa
                 prikazi(7);
             else
                 prikazi(-1);
+        }
+
+        private void mnuKreirajPonuda_Click(object sender, EventArgs e)
+        {
+            frmNovaPonuda novaPonuda = new frmNovaPonuda(this, vrabotenID);
+            novaPonuda.Show();
         }
 
 
