@@ -40,6 +40,8 @@
             this.Status = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Komentar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtGrad = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtKomentar = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnConfirmK = new System.Windows.Forms.Button();
@@ -53,8 +55,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtIme = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtGrad = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdLicaKontakt)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -167,6 +167,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Клиенти";
             // 
+            // txtGrad
+            // 
+            this.txtGrad.AccessibleDescription = "/";
+            this.txtGrad.Location = new System.Drawing.Point(467, 24);
+            this.txtGrad.Name = "txtGrad";
+            this.txtGrad.Size = new System.Drawing.Size(117, 20);
+            this.txtGrad.TabIndex = 11;
+            // 
+            // label7
+            // 
+            this.label7.AccessibleDescription = "//";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(428, 27);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 13);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Град";
+            // 
             // txtKomentar
             // 
             this.txtKomentar.Location = new System.Drawing.Point(87, 87);
@@ -274,24 +292,6 @@
             this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Име";
-            // 
-            // label7
-            // 
-            this.label7.AccessibleDescription = "//";
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(428, 27);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 13);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Град";
-            // 
-            // txtGrad
-            // 
-            this.txtGrad.AccessibleDescription = "/";
-            this.txtGrad.Location = new System.Drawing.Point(467, 24);
-            this.txtGrad.Name = "txtGrad";
-            this.txtGrad.Size = new System.Drawing.Size(117, 20);
-            this.txtGrad.TabIndex = 11;
             // 
             // frmNovKlient
             // 
