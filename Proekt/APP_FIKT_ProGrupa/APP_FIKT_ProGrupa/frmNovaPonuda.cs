@@ -151,10 +151,14 @@ namespace APP_FIKT_ProGrupa
             txtVkupno.Text = (int.Parse(txtVkupno.Text) + int.Parse(txtKolicina.Text) * int.Parse(txtCena.Text)).ToString();
             txtDDV.Text = (float.Parse(txtVkupno.Text) * 0.18).ToString();
             txtIznos_DDV.Text = (int.Parse(txtVkupno.Text) + float.Parse(txtDDV.Text)).ToString();
+            txtKolicina.Text = "1";
+            cmbProizvod.Text = "";
+            txtCena.Text = "";
         }
 
         private void btnKreiraj_Click(object sender, EventArgs e)
         {
+
             Object oMissing = System.Reflection.Missing.Value;
 
             Object oTemplatePath;// = "D:\\MyTemplate.dotx";
@@ -183,14 +187,13 @@ namespace APP_FIKT_ProGrupa
 
             wordApp = new Microsoft.Office.Interop.Word.Application();
             wordDoc = wordApp.Documents.Add(ref oTemplatePath, ref oMissing, ref oMissing, ref oMissing);
-            
+
+
+            // context ********
             foreach (Field myMergeField in wordDoc.Fields)
             {
                 Range rngFieldCode = myMergeField.Code;
-
                 String fieldText = rngFieldCode.Text;
-
-
 
                 // ONLY GETTING THE MAILMERGE FIELDS
 
@@ -213,6 +216,7 @@ namespace APP_FIKT_ProGrupa
                     // **** FIELD REPLACEMENT IMPLEMENTATION GOES HERE ****//
 
                     // THE PROGRAMMER CAN HAVE HIS OWN IMPLEMENTATIONS HERE
+
                     switch (fieldName)
                     {
                         case "korisnik":
@@ -231,12 +235,6 @@ namespace APP_FIKT_ProGrupa
                             {
                                 myMergeField.Select();
                                 wordApp.Selection.TypeText(Klient.Adresa);
-                                break;
-                            }
-                        case "arhiva":
-                            {
-                                myMergeField.Select();
-                                wordApp.Selection.TypeText("Vivek");
                                 break;
                             }
                         case "vaznost":
@@ -265,19 +263,13 @@ namespace APP_FIKT_ProGrupa
                                 wordApp.Selection.TypeText(Vraboten.PrezimeV);
                                 break;
                             }
-                        case "IDTemp":
-                            {
-                                myMergeField.Select();
-                                wordApp.Selection.TypeText(indexTemp.ToString());
-                                break;
-                            }
                         case "stavka":
                             {
                                 myMergeField.Select();
-                             //   wordApp.Selection.TypeText("");
+                                //   wordApp.Selection.TypeText("");
                                 Microsoft.Office.Interop.Word.Selection wrdSelect = wordApp.Selection;
                                 Microsoft.Office.Interop.Word.Table wrdTable = wordDoc.Tables.Add(wrdSelect.Range, 1, 5, ref oMissing, ref oMissing);
-                                
+
                                 wrdTable.Range.ParagraphFormat.RightIndent = wordDoc.Paragraphs.RightIndent;
                                 wrdTable.Borders.OutsideLineStyle = WdLineStyle.wdLineStyleSingle;
                                 wrdTable.Borders.OutsideLineWidth = WdLineWidth.wdLineWidth075pt;
@@ -285,7 +277,7 @@ namespace APP_FIKT_ProGrupa
                                 wrdTable.Borders.InsideLineWidth = WdLineWidth.wdLineWidth075pt;
 
                                 wrdTable.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                                
+
                                 wrdTable.Columns[1].SetWidth(50, WdRulerStyle.wdAdjustNone);
                                 wrdTable.Columns[2].SetWidth(180, WdRulerStyle.wdAdjustNone);
                                 wrdTable.Columns[3].SetWidth(60, WdRulerStyle.wdAdjustNone);
@@ -297,16 +289,16 @@ namespace APP_FIKT_ProGrupa
                                 wrdTable.Cell(1, 3).Range.Text = "Количина";
                                 wrdTable.Cell(1, 4).Range.Text = "Цена";
                                 wrdTable.Cell(1, 5).Range.Text = "Износ";
-                               // wrdTable.Cell(0, 0).Range.SetRange(0,50);
+                                // wrdTable.Cell(0, 0).Range.SetRange(0,50);
 
                                 for (int i = 0; i < grdStavka.RowCount; i++)
                                 {
                                     wordDoc.Tables[1].Rows.Add(ref oMissing);
-                                    wrdTable.Cell(i+2, 1).Range.Text = grdStavka[0, i].Value.ToString();
-                                    wrdTable.Cell(i+2, 2).Range.Text = grdStavka[1, i].Value.ToString();
-                                    wrdTable.Cell(i+2, 3).Range.Text = grdStavka[2, i].Value.ToString();
-                                    wrdTable.Cell(i+2, 4).Range.Text = grdStavka[3, i].Value.ToString();
-                                    wrdTable.Cell(i+2, 5).Range.Text = grdStavka[4, i].Value.ToString();
+                                    wrdTable.Cell(i + 2, 1).Range.Text = grdStavka[0, i].Value.ToString();
+                                    wrdTable.Cell(i + 2, 2).Range.Text = grdStavka[1, i].Value.ToString();
+                                    wrdTable.Cell(i + 2, 3).Range.Text = grdStavka[2, i].Value.ToString();
+                                    wrdTable.Cell(i + 2, 4).Range.Text = grdStavka[3, i].Value.ToString();
+                                    wrdTable.Cell(i + 2, 5).Range.Text = grdStavka[4, i].Value.ToString();
                                 }
 
                                 wordDoc.Tables[1].Rows.Add(ref oMissing);
@@ -316,13 +308,13 @@ namespace APP_FIKT_ProGrupa
                                 wrdTable.Cell(wrdTable.Rows.Count, 2).Range.Text = txtVkupno.Text.ToString();
 
                                 wordDoc.Tables[1].Rows.Add(ref oMissing);
-                            //    wrdTable.Cell(wrdTable.Rows.Count, 1).Merge(wrdTable.Cell(wrdTable.Rows.Count, 4));
+                                //    wrdTable.Cell(wrdTable.Rows.Count, 1).Merge(wrdTable.Cell(wrdTable.Rows.Count, 4));
                                 wrdTable.Cell(wrdTable.Rows.Count, 1).Range.Text = "ДДВ 18%";
                                 wrdTable.Cell(wrdTable.Rows.Count, 1).Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
                                 wrdTable.Cell(wrdTable.Rows.Count, 2).Range.Text = txtDDV.Text.ToString();
 
                                 wordDoc.Tables[1].Rows.Add(ref oMissing);
-                             //   wrdTable.Cell(wrdTable.Rows.Count, 1).Merge(wrdTable.Cell(wrdTable.Rows.Count, 4));
+                                //   wrdTable.Cell(wrdTable.Rows.Count, 1).Merge(wrdTable.Cell(wrdTable.Rows.Count, 4));
                                 wrdTable.Cell(wrdTable.Rows.Count, 1).Range.Text = "Вкупно за плаќање";
                                 wrdTable.Cell(wrdTable.Rows.Count, 1).Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
                                 wrdTable.Cell(wrdTable.Rows.Count, 2).Range.Text = txtIznos_DDV.Text.ToString();
@@ -332,15 +324,102 @@ namespace APP_FIKT_ProGrupa
                             {
                                 break;
                             }
+
+                        }
+                    }
+                }
+
+            var addArhivski = new tblArhiva();
+            context.tblArhivas.InsertOnSubmit(addArhivski);
+            context.SubmitChanges();
+         //   context = new BrziPonudiDataContext();
+            var posledenArhivski = addArhivski.IDArhivskiBroj;
+         //   int idArhivski = addArhivski.IDArhivskiBroj; 
+            //imame indextemp od prethodno;
+            int godina = DateTime.Now.Year;
+            string arhivskiBR = posledenArhivski.ToString() + "-" + indexTemp + "-" + godina.ToString();
+            addArhivski.Arhivskibroj = arhivskiBR;
+            var dokument = new tblDokumenti()
+            {
+                Arhivskibroj = arhivskiBR,
+                IDFirma = indexKlient,
+                IDVraboteni = vrabotenID,
+                DataZaOdgovor = dtVaznost.Value,
+                KalendarskaGodina = godina.ToString(),
+                IzdadenoNa = DateTime.Now,
+                IDTemp = indexTemp,
+            };
+            context.tblDokumentis.InsertOnSubmit(dokument);
+            context.SubmitChanges();
+
+
+        //    context = new BrziPonudiDataContext();
+        //    dokument = context.tblDokumentis.LastOrDefault();
+            var posledenDokument = dokument.IDDokument;
+            for (int stavkaProizvodi = 0; stavkaProizvodi < grdStavka.RowCount; stavkaProizvodi++)
+            {
+                var stavka = new tblStavka()
+                {
+                    IDProizvodPonuda = int.Parse(grdStavka[0, stavkaProizvodi].Value.ToString()),
+                    Kolicina = grdStavka[2, stavkaProizvodi].Value.ToString(),
+                    Cena = grdStavka[3, stavkaProizvodi].Value.ToString(),
+                    IDPonuda = posledenDokument,
+                };
+                context.tblStavkas.InsertOnSubmit(stavka);
+            }
+            context.SubmitChanges();
+            // header and footer **********
+            bool header = true;
+        label1:
+
+            Microsoft.Office.Interop.Word.Section sec = wordDoc.Sections[1];
+            Microsoft.Office.Interop.Word.Range rng = sec.Headers[Microsoft.Office.Interop.Word.WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
+            if (!header)
+                rng = sec.Footers[Microsoft.Office.Interop.Word.WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
+
+            foreach (Microsoft.Office.Interop.Word.Field fld in rng.Fields)
+            {
+                Range rngFieldCode = fld.Code;
+                String fieldText = rngFieldCode.Text;
+                // if (fld.Type == Microsoft.Office.Interop.Word.WdFieldType.wdFieldMergeField)
+                if (fieldText.StartsWith(" MERGEFIELD"))
+                {
+                    int endMerge = fieldText.IndexOf("\\");
+
+                    int fieldNameLength = fieldText.Length - endMerge;
+
+                    String fieldName = fieldText.Substring(11, endMerge - 11);
+
+                    // GIVES THE FIELDNAMES AS THE USER HAD ENTERED IN .dot FILE
+
+                    fieldName = fieldName.Trim();
+
+                    //   String dataFieldName = fld.Code.Text.Trim();
+                    if (fieldName == "IDTemp")
+                    {
+                        fld.Select();
+                        wordApp.Selection.TypeText(indexTemp.ToString());
+                    }
+
+                    if (fieldName == "arhiva")
+                    {
+                        fld.Select();
+                        wordApp.Selection.TypeText(arhivskiBR);
                     }
                 }
             }
+            if (!header)
+                goto label2;
+            else
+            {
+                header = false;
+                goto label1;
+            }
+        label2:
             wordDoc.SaveAs(@oTemplatePath + ".docx");
             wordApp.Documents.Open(@oTemplatePath + ".docx");
+            wordDoc.PrintPreview();
         }
-
-        
-
         
     }
 }

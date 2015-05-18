@@ -119,7 +119,7 @@ namespace APP_FIKT_ProGrupa
                     };
                     context.Vrabotens.InsertOnSubmit(v);
                     context.SubmitChanges();
-                    MessageBox.Show("Вашите податоци се успешно внесени. По добиена дозвола од администратор, ќе ви биде овозможен пристап до системот!", "Ви честитаме", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Вашите податоци се успешно внесени.", "Ви честитаме", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtIme.Text = "";
                     txtPrezime.Text = "";
                     txtMail.Text = "";

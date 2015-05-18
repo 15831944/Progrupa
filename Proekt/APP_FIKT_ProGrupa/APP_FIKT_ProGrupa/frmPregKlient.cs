@@ -219,7 +219,7 @@ namespace APP_FIKT_ProGrupa
                     // Insert any additional changes to column values.
 
                     context.SubmitChanges();
-                    MessageBox.Show("Податоците за фирмата " + grdPregLicaKontakt["ImeFirma", index].Value.ToString() + " се успешно променети!", "Успешна промена", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Податоците за фирмата " + grdPregKlient["ImeFirma", index].Value.ToString() + " се успешно променети!", "Успешна промена", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {

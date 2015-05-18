@@ -28,46 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmbTemp = new System.Windows.Forms.ComboBox();
-            this.dtVaznost = new System.Windows.Forms.DateTimePicker();
             this.cmbKlient = new System.Windows.Forms.ComboBox();
+            this.dtVaznost = new System.Windows.Forms.DateTimePicker();
+            this.cmbTemp = new System.Windows.Forms.ComboBox();
             this.btnKreiraj = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtIznos_DDV = new System.Windows.Forms.TextBox();
+            this.txtDDV = new System.Windows.Forms.TextBox();
+            this.txtVkupno = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.grdStavka = new System.Windows.Forms.DataGridView();
             this.grdSifra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grdNaziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grdKolicina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grdCena = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grdIznos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtVkupno = new System.Windows.Forms.TextBox();
-            this.txtDDV = new System.Windows.Forms.TextBox();
-            this.txtIznos_DDV = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cmbProizvod = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtKolicina = new System.Windows.Forms.TextBox();
+            this.btnProizvodAdd = new System.Windows.Forms.Button();
             this.txtCena = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnProizvodAdd = new System.Windows.Forms.Button();
+            this.txtKolicina = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmbProizvod = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdStavka)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // cmbTemp
+            // cmbKlient
             // 
-            this.cmbTemp.FormattingEnabled = true;
-            this.cmbTemp.Location = new System.Drawing.Point(15, 25);
-            this.cmbTemp.Name = "cmbTemp";
-            this.cmbTemp.Size = new System.Drawing.Size(200, 21);
-            this.cmbTemp.TabIndex = 0;
+            this.cmbKlient.FormattingEnabled = true;
+            this.cmbKlient.Location = new System.Drawing.Point(15, 25);
+            this.cmbKlient.Name = "cmbKlient";
+            this.cmbKlient.Size = new System.Drawing.Size(200, 21);
+            this.cmbKlient.TabIndex = 0;
             // 
             // dtVaznost
             // 
@@ -76,13 +76,13 @@
             this.dtVaznost.Size = new System.Drawing.Size(200, 20);
             this.dtVaznost.TabIndex = 2;
             // 
-            // cmbKlient
+            // cmbTemp
             // 
-            this.cmbKlient.FormattingEnabled = true;
-            this.cmbKlient.Location = new System.Drawing.Point(15, 65);
-            this.cmbKlient.Name = "cmbKlient";
-            this.cmbKlient.Size = new System.Drawing.Size(200, 21);
-            this.cmbKlient.TabIndex = 1;
+            this.cmbTemp.FormattingEnabled = true;
+            this.cmbTemp.Location = new System.Drawing.Point(15, 65);
+            this.cmbTemp.Name = "cmbTemp";
+            this.cmbTemp.Size = new System.Drawing.Size(200, 21);
+            this.cmbTemp.TabIndex = 1;
             // 
             // btnKreiraj
             // 
@@ -136,6 +136,58 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ставка";
+            // 
+            // txtIznos_DDV
+            // 
+            this.txtIznos_DDV.Enabled = false;
+            this.txtIznos_DDV.Location = new System.Drawing.Point(119, 159);
+            this.txtIznos_DDV.Name = "txtIznos_DDV";
+            this.txtIznos_DDV.Size = new System.Drawing.Size(222, 20);
+            this.txtIznos_DDV.TabIndex = 13;
+            // 
+            // txtDDV
+            // 
+            this.txtDDV.Enabled = false;
+            this.txtDDV.Location = new System.Drawing.Point(241, 129);
+            this.txtDDV.Name = "txtDDV";
+            this.txtDDV.Size = new System.Drawing.Size(100, 20);
+            this.txtDDV.TabIndex = 12;
+            // 
+            // txtVkupno
+            // 
+            this.txtVkupno.Enabled = false;
+            this.txtVkupno.Location = new System.Drawing.Point(51, 129);
+            this.txtVkupno.Name = "txtVkupno";
+            this.txtVkupno.Size = new System.Drawing.Size(100, 20);
+            this.txtVkupno.TabIndex = 11;
+            this.txtVkupno.Text = "0";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 162);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(107, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Вкупно за плаќање";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(180, 132);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "ДДВ 18%";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 132);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Износ";
             // 
             // grdStavka
             // 
@@ -192,58 +244,6 @@
             this.grdIznos.ReadOnly = true;
             this.grdIznos.Width = 70;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 132);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Износ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(180, 132);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "ДДВ 18%";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 162);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Вкупно за плаќање";
-            // 
-            // txtVkupno
-            // 
-            this.txtVkupno.Enabled = false;
-            this.txtVkupno.Location = new System.Drawing.Point(51, 129);
-            this.txtVkupno.Name = "txtVkupno";
-            this.txtVkupno.Size = new System.Drawing.Size(100, 20);
-            this.txtVkupno.TabIndex = 11;
-            this.txtVkupno.Text = "0";
-            // 
-            // txtDDV
-            // 
-            this.txtDDV.Enabled = false;
-            this.txtDDV.Location = new System.Drawing.Point(241, 129);
-            this.txtDDV.Name = "txtDDV";
-            this.txtDDV.Size = new System.Drawing.Size(100, 20);
-            this.txtDDV.TabIndex = 12;
-            // 
-            // txtIznos_DDV
-            // 
-            this.txtIznos_DDV.Enabled = false;
-            this.txtIznos_DDV.Location = new System.Drawing.Point(119, 159);
-            this.txtIznos_DDV.Name = "txtIznos_DDV";
-            this.txtIznos_DDV.Size = new System.Drawing.Size(222, 20);
-            this.txtIznos_DDV.TabIndex = 13;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnProizvodAdd);
@@ -260,40 +260,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Додај производ";
             // 
-            // label7
+            // btnProizvodAdd
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 19);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 13);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Производ";
-            // 
-            // cmbProizvod
-            // 
-            this.cmbProizvod.FormattingEnabled = true;
-            this.cmbProizvod.Location = new System.Drawing.Point(69, 16);
-            this.cmbProizvod.Name = "cmbProizvod";
-            this.cmbProizvod.Size = new System.Drawing.Size(200, 21);
-            this.cmbProizvod.TabIndex = 9;
-            this.cmbProizvod.SelectedIndexChanged += new System.EventHandler(this.cmbProizvod_SelectedIndexChanged);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 44);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 13);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Количина";
-            // 
-            // txtKolicina
-            // 
-            this.txtKolicina.Location = new System.Drawing.Point(69, 41);
-            this.txtKolicina.Name = "txtKolicina";
-            this.txtKolicina.Size = new System.Drawing.Size(100, 20);
-            this.txtKolicina.TabIndex = 12;
-            this.txtKolicina.Text = "1";
+            this.btnProizvodAdd.Location = new System.Drawing.Point(9, 93);
+            this.btnProizvodAdd.Name = "btnProizvodAdd";
+            this.btnProizvodAdd.Size = new System.Drawing.Size(160, 23);
+            this.btnProizvodAdd.TabIndex = 15;
+            this.btnProizvodAdd.Text = "Додај производ во ставка";
+            this.btnProizvodAdd.UseVisualStyleBackColor = true;
+            this.btnProizvodAdd.Click += new System.EventHandler(this.btnProizvodAdd_Click);
             // 
             // txtCena
             // 
@@ -311,15 +286,40 @@
             this.label9.TabIndex = 13;
             this.label9.Text = "Цена";
             // 
-            // btnProizvodAdd
+            // txtKolicina
             // 
-            this.btnProizvodAdd.Location = new System.Drawing.Point(9, 93);
-            this.btnProizvodAdd.Name = "btnProizvodAdd";
-            this.btnProizvodAdd.Size = new System.Drawing.Size(160, 23);
-            this.btnProizvodAdd.TabIndex = 15;
-            this.btnProizvodAdd.Text = "Додај производ во ставка";
-            this.btnProizvodAdd.UseVisualStyleBackColor = true;
-            this.btnProizvodAdd.Click += new System.EventHandler(this.btnProizvodAdd_Click);
+            this.txtKolicina.Location = new System.Drawing.Point(69, 41);
+            this.txtKolicina.Name = "txtKolicina";
+            this.txtKolicina.Size = new System.Drawing.Size(100, 20);
+            this.txtKolicina.TabIndex = 12;
+            this.txtKolicina.Text = "1";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 44);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(55, 13);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Количина";
+            // 
+            // cmbProizvod
+            // 
+            this.cmbProizvod.FormattingEnabled = true;
+            this.cmbProizvod.Location = new System.Drawing.Point(69, 16);
+            this.cmbProizvod.Name = "cmbProizvod";
+            this.cmbProizvod.Size = new System.Drawing.Size(200, 21);
+            this.cmbProizvod.TabIndex = 9;
+            this.cmbProizvod.SelectedIndexChanged += new System.EventHandler(this.cmbProizvod_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 19);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 13);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Производ";
             // 
             // frmNovaPonuda
             // 
@@ -332,9 +332,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnKreiraj);
-            this.Controls.Add(this.cmbKlient);
-            this.Controls.Add(this.dtVaznost);
             this.Controls.Add(this.cmbTemp);
+            this.Controls.Add(this.dtVaznost);
+            this.Controls.Add(this.cmbKlient);
             this.Name = "frmNovaPonuda";
             this.Text = "frmNovaPonuda";
             this.Load += new System.EventHandler(this.frmNovaPonuda_Load);
@@ -350,9 +350,9 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cmbTemp;
-        private System.Windows.Forms.DateTimePicker dtVaznost;
         private System.Windows.Forms.ComboBox cmbKlient;
+        private System.Windows.Forms.DateTimePicker dtVaznost;
+        private System.Windows.Forms.ComboBox cmbTemp;
         private System.Windows.Forms.Button btnKreiraj;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
