@@ -43,11 +43,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.grdStavka = new System.Windows.Forms.DataGridView();
-            this.grdSifra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grdNaziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grdKolicina = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grdCena = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grdIznos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnProizvodAdd = new System.Windows.Forms.Button();
             this.txtCena = new System.Windows.Forms.TextBox();
@@ -56,6 +51,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cmbProizvod = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtMerka = new System.Windows.Forms.TextBox();
+            this.grdSifra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grdNaziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grdKolicina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grdMerka = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grdCena = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grdIznos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdStavka)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -199,6 +201,7 @@
             this.grdSifra,
             this.grdNaziv,
             this.grdKolicina,
+            this.grdMerka,
             this.grdCena,
             this.grdIznos});
             this.grdStavka.Location = new System.Drawing.Point(6, 19);
@@ -207,45 +210,9 @@
             this.grdStavka.Size = new System.Drawing.Size(529, 104);
             this.grdStavka.TabIndex = 0;
             // 
-            // grdSifra
-            // 
-            this.grdSifra.FillWeight = 50F;
-            this.grdSifra.HeaderText = "Шифра";
-            this.grdSifra.Name = "grdSifra";
-            this.grdSifra.ReadOnly = true;
-            this.grdSifra.Width = 50;
-            // 
-            // grdNaziv
-            // 
-            this.grdNaziv.FillWeight = 200F;
-            this.grdNaziv.HeaderText = "Назив";
-            this.grdNaziv.Name = "grdNaziv";
-            this.grdNaziv.ReadOnly = true;
-            this.grdNaziv.Width = 200;
-            // 
-            // grdKolicina
-            // 
-            this.grdKolicina.HeaderText = "Количина";
-            this.grdKolicina.Name = "grdKolicina";
-            this.grdKolicina.ReadOnly = true;
-            this.grdKolicina.Width = 70;
-            // 
-            // grdCena
-            // 
-            this.grdCena.HeaderText = "Цена";
-            this.grdCena.Name = "grdCena";
-            this.grdCena.ReadOnly = true;
-            this.grdCena.Width = 70;
-            // 
-            // grdIznos
-            // 
-            this.grdIznos.HeaderText = "Износ";
-            this.grdIznos.Name = "grdIznos";
-            this.grdIznos.ReadOnly = true;
-            this.grdIznos.Width = 70;
-            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtMerka);
             this.groupBox2.Controls.Add(this.btnProizvodAdd);
             this.groupBox2.Controls.Add(this.txtCena);
             this.groupBox2.Controls.Add(this.label9);
@@ -321,6 +288,58 @@
             this.label7.TabIndex = 5;
             this.label7.Text = "Производ";
             // 
+            // txtMerka
+            // 
+            this.txtMerka.Enabled = false;
+            this.txtMerka.Location = new System.Drawing.Point(175, 41);
+            this.txtMerka.Name = "txtMerka";
+            this.txtMerka.Size = new System.Drawing.Size(94, 20);
+            this.txtMerka.TabIndex = 16;
+            // 
+            // grdSifra
+            // 
+            this.grdSifra.FillWeight = 50F;
+            this.grdSifra.HeaderText = "Шифра";
+            this.grdSifra.Name = "grdSifra";
+            this.grdSifra.ReadOnly = true;
+            this.grdSifra.Width = 50;
+            // 
+            // grdNaziv
+            // 
+            this.grdNaziv.FillWeight = 200F;
+            this.grdNaziv.HeaderText = "Назив";
+            this.grdNaziv.Name = "grdNaziv";
+            this.grdNaziv.ReadOnly = true;
+            this.grdNaziv.Width = 120;
+            // 
+            // grdKolicina
+            // 
+            this.grdKolicina.HeaderText = "Количина";
+            this.grdKolicina.Name = "grdKolicina";
+            this.grdKolicina.ReadOnly = true;
+            this.grdKolicina.Width = 70;
+            // 
+            // grdMerka
+            // 
+            this.grdMerka.HeaderText = "Ед. мерка";
+            this.grdMerka.Name = "grdMerka";
+            this.grdMerka.ReadOnly = true;
+            this.grdMerka.Width = 90;
+            // 
+            // grdCena
+            // 
+            this.grdCena.HeaderText = "Цена";
+            this.grdCena.Name = "grdCena";
+            this.grdCena.ReadOnly = true;
+            this.grdCena.Width = 70;
+            // 
+            // grdIznos
+            // 
+            this.grdIznos.HeaderText = "Износ";
+            this.grdIznos.Name = "grdIznos";
+            this.grdIznos.ReadOnly = true;
+            this.grdIznos.Width = 70;
+            // 
             // frmNovaPonuda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,11 +384,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView grdStavka;
-        private System.Windows.Forms.DataGridViewTextBoxColumn grdSifra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn grdNaziv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn grdKolicina;
-        private System.Windows.Forms.DataGridViewTextBoxColumn grdCena;
-        private System.Windows.Forms.DataGridViewTextBoxColumn grdIznos;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnProizvodAdd;
         private System.Windows.Forms.TextBox txtCena;
@@ -378,5 +392,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbProizvod;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtMerka;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdSifra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdNaziv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdKolicina;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdMerka;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdCena;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grdIznos;
     }
 }

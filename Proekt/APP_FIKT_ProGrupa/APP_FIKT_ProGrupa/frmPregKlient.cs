@@ -118,8 +118,10 @@ namespace APP_FIKT_ProGrupa
                         }
                         else
                         {
+                            grdPregLicaKontakt.DataSource = queryLicaKontakt;
+                            grdPregLicaKontakt.Visible = true;
                             MessageBox.Show("Не се пронајдени податоци.", "Нема податоци", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            grdPregLicaKontakt.Visible = false;
+                           // grdPregLicaKontakt.Visible = false;
                         }
                         break;
                     }

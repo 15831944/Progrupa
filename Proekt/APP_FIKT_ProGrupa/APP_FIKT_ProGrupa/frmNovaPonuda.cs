@@ -136,6 +136,7 @@ namespace APP_FIKT_ProGrupa
         private void cmbProizvod_SelectedIndexChanged(object sender, EventArgs e)
         {
             var proizvod = context.tblProizvodis.Single<tblProizvodi>(ee => ee.Naziv == cmbProizvod.Text);
+            txtMerka.Text = proizvod.EdinicaMerka.ToString();
             txtCena.Text = proizvod.Cena.ToString();
         }
 
@@ -146,8 +147,9 @@ namespace APP_FIKT_ProGrupa
             grdStavka[0, grdStavka.RowCount-1].Value = proizvod.IDProizvodPonuda.ToString();
             grdStavka[1, grdStavka.RowCount-1].Value = proizvod.Naziv.ToString();
             grdStavka[2, grdStavka.RowCount-1].Value = txtKolicina.Text.ToString();
-            grdStavka[3, grdStavka.RowCount-1].Value = txtCena.Text.ToString();
-            grdStavka[4, grdStavka.RowCount-1].Value = int.Parse(txtKolicina.Text.ToString()) * int.Parse(txtCena.Text.ToString());
+            grdStavka[3, grdStavka.RowCount-1].Value = txtMerka.Text.ToString();
+            grdStavka[4, grdStavka.RowCount-1].Value = txtCena.Text.ToString();
+            grdStavka[5, grdStavka.RowCount-1].Value = int.Parse(txtKolicina.Text.ToString()) * int.Parse(txtCena.Text.ToString());
             txtVkupno.Text = (int.Parse(txtVkupno.Text) + int.Parse(txtKolicina.Text) * int.Parse(txtCena.Text)).ToString();
             txtDDV.Text = (float.Parse(txtVkupno.Text) * 0.18).ToString();
             txtIznos_DDV.Text = (int.Parse(txtVkupno.Text) + float.Parse(txtDDV.Text)).ToString();
@@ -268,7 +270,7 @@ namespace APP_FIKT_ProGrupa
                                 myMergeField.Select();
                                 //   wordApp.Selection.TypeText("");
                                 Microsoft.Office.Interop.Word.Selection wrdSelect = wordApp.Selection;
-                                Microsoft.Office.Interop.Word.Table wrdTable = wordDoc.Tables.Add(wrdSelect.Range, 1, 5, ref oMissing, ref oMissing);
+                                Microsoft.Office.Interop.Word.Table wrdTable = wordDoc.Tables.Add(wrdSelect.Range, 1, 6, ref oMissing, ref oMissing);
 
                                 wrdTable.Range.ParagraphFormat.RightIndent = wordDoc.Paragraphs.RightIndent;
                                 wrdTable.Borders.OutsideLineStyle = WdLineStyle.wdLineStyleSingle;
@@ -279,16 +281,18 @@ namespace APP_FIKT_ProGrupa
                                 wrdTable.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
 
                                 wrdTable.Columns[1].SetWidth(50, WdRulerStyle.wdAdjustNone);
-                                wrdTable.Columns[2].SetWidth(180, WdRulerStyle.wdAdjustNone);
+                                wrdTable.Columns[2].SetWidth(150, WdRulerStyle.wdAdjustNone);
                                 wrdTable.Columns[3].SetWidth(60, WdRulerStyle.wdAdjustNone);
-                                wrdTable.Columns[4].SetWidth(60, WdRulerStyle.wdAdjustNone);
-                                wrdTable.Columns[5].SetWidth(60, WdRulerStyle.wdAdjustNone);
+                                wrdTable.Columns[4].SetWidth(50, WdRulerStyle.wdAdjustNone);
+                                wrdTable.Columns[5].SetWidth(50, WdRulerStyle.wdAdjustNone);
+                                wrdTable.Columns[6].SetWidth(50, WdRulerStyle.wdAdjustNone);
 
                                 wrdTable.Cell(1, 1).Range.Text = "Шифра";
                                 wrdTable.Cell(1, 2).Range.Text = "Назив";
-                                wrdTable.Cell(1, 3).Range.Text = "Количина";
-                                wrdTable.Cell(1, 4).Range.Text = "Цена";
-                                wrdTable.Cell(1, 5).Range.Text = "Износ";
+                                wrdTable.Cell(1, 3).Range.Text = "Количина"; 
+                                wrdTable.Cell(1, 4).Range.Text = "Ед. Мерка";
+                                wrdTable.Cell(1, 5).Range.Text = "Цена";
+                                wrdTable.Cell(1, 6).Range.Text = "Износ";
                                 // wrdTable.Cell(0, 0).Range.SetRange(0,50);
 
                                 for (int i = 0; i < grdStavka.RowCount; i++)
@@ -299,10 +303,11 @@ namespace APP_FIKT_ProGrupa
                                     wrdTable.Cell(i + 2, 3).Range.Text = grdStavka[2, i].Value.ToString();
                                     wrdTable.Cell(i + 2, 4).Range.Text = grdStavka[3, i].Value.ToString();
                                     wrdTable.Cell(i + 2, 5).Range.Text = grdStavka[4, i].Value.ToString();
+                                    wrdTable.Cell(i + 2, 6).Range.Text = grdStavka[5, i].Value.ToString();
                                 }
 
                                 wordDoc.Tables[1].Rows.Add(ref oMissing);
-                                wrdTable.Cell(wrdTable.Rows.Count, 1).Merge(wrdTable.Cell(wrdTable.Rows.Count, 4));
+                                wrdTable.Cell(wrdTable.Rows.Count, 1).Merge(wrdTable.Cell(wrdTable.Rows.Count, 5));
                                 wrdTable.Cell(wrdTable.Rows.Count, 1).Range.Text = "Износ";
                                 wrdTable.Cell(wrdTable.Rows.Count, 1).Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
                                 wrdTable.Cell(wrdTable.Rows.Count, 2).Range.Text = txtVkupno.Text.ToString();
@@ -344,7 +349,7 @@ namespace APP_FIKT_ProGrupa
                 Arhivskibroj = arhivskiBR,
                 IDFirma = indexKlient,
                 IDVraboteni = vrabotenID,
-                DataZaOdgovor = dtVaznost.Value,
+                DataZaOdgovor = dtVaznost.Value.Date,
                 KalendarskaGodina = godina.ToString(),
                 IzdadenoNa = DateTime.Now,
                 IDTemp = indexTemp,
@@ -362,7 +367,7 @@ namespace APP_FIKT_ProGrupa
                 {
                     IDProizvodPonuda = int.Parse(grdStavka[0, stavkaProizvodi].Value.ToString()),
                     Kolicina = grdStavka[2, stavkaProizvodi].Value.ToString(),
-                    Cena = grdStavka[3, stavkaProizvodi].Value.ToString(),
+                    Cena = grdStavka[4, stavkaProizvodi].Value.ToString(),
                     IDPonuda = posledenDokument,
                 };
                 context.tblStavkas.InsertOnSubmit(stavka);
