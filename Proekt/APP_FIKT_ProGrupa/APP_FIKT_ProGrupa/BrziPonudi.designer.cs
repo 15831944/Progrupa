@@ -48,12 +48,12 @@ namespace APP_FIKT_ProGrupa
     partial void InserttblLicaKontakt(tblLicaKontakt instance);
     partial void UpdatetblLicaKontakt(tblLicaKontakt instance);
     partial void DeletetblLicaKontakt(tblLicaKontakt instance);
-    partial void InserttblDokumenti(tblDokumenti instance);
-    partial void UpdatetblDokumenti(tblDokumenti instance);
-    partial void DeletetblDokumenti(tblDokumenti instance);
     partial void InserttblStavka(tblStavka instance);
     partial void UpdatetblStavka(tblStavka instance);
     partial void DeletetblStavka(tblStavka instance);
+    partial void InserttblDokumenti(tblDokumenti instance);
+    partial void UpdatetblDokumenti(tblDokumenti instance);
+    partial void DeletetblDokumenti(tblDokumenti instance);
     #endregion
 		
 		public BrziPonudiDataContext() : 
@@ -134,19 +134,19 @@ namespace APP_FIKT_ProGrupa
 			}
 		}
 		
-		public System.Data.Linq.Table<tblDokumenti> tblDokumentis
-		{
-			get
-			{
-				return this.GetTable<tblDokumenti>();
-			}
-		}
-		
 		public System.Data.Linq.Table<tblStavka> tblStavkas
 		{
 			get
 			{
 				return this.GetTable<tblStavka>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tblDokumenti> tblDokumentis
+		{
+			get
+			{
+				return this.GetTable<tblDokumenti>();
 			}
 		}
 	}
@@ -1291,308 +1291,6 @@ namespace APP_FIKT_ProGrupa
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblDokumenti")]
-	public partial class tblDokumenti : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _IDDokument;
-		
-		private string _Arhivskibroj;
-		
-		private string _BrojNaPonuda;
-		
-		private int _IDFirma;
-		
-		private int _IDVraboteni;
-		
-		private System.Nullable<int> _IDLicaZaKontakt;
-		
-		private System.Nullable<System.DateTime> _DataZaOdgovor;
-		
-		private string _KalendarskaGodina;
-		
-		private System.Nullable<System.DateTime> _IzdadenoNa;
-		
-		private int _IDTemp;
-		
-		private string _IDPonudaStavka;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDDokumentChanging(int value);
-    partial void OnIDDokumentChanged();
-    partial void OnArhivskibrojChanging(string value);
-    partial void OnArhivskibrojChanged();
-    partial void OnBrojNaPonudaChanging(string value);
-    partial void OnBrojNaPonudaChanged();
-    partial void OnIDFirmaChanging(int value);
-    partial void OnIDFirmaChanged();
-    partial void OnIDVraboteniChanging(int value);
-    partial void OnIDVraboteniChanged();
-    partial void OnIDLicaZaKontaktChanging(System.Nullable<int> value);
-    partial void OnIDLicaZaKontaktChanged();
-    partial void OnDataZaOdgovorChanging(System.Nullable<System.DateTime> value);
-    partial void OnDataZaOdgovorChanged();
-    partial void OnKalendarskaGodinaChanging(string value);
-    partial void OnKalendarskaGodinaChanged();
-    partial void OnIzdadenoNaChanging(System.Nullable<System.DateTime> value);
-    partial void OnIzdadenoNaChanged();
-    partial void OnIDTempChanging(int value);
-    partial void OnIDTempChanged();
-    partial void OnIDPonudaStavkaChanging(string value);
-    partial void OnIDPonudaStavkaChanged();
-    #endregion
-		
-		public tblDokumenti()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDDokument", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int IDDokument
-		{
-			get
-			{
-				return this._IDDokument;
-			}
-			set
-			{
-				if ((this._IDDokument != value))
-				{
-					this.OnIDDokumentChanging(value);
-					this.SendPropertyChanging();
-					this._IDDokument = value;
-					this.SendPropertyChanged("IDDokument");
-					this.OnIDDokumentChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Arhivskibroj", DbType="NVarChar(50)")]
-		public string Arhivskibroj
-		{
-			get
-			{
-				return this._Arhivskibroj;
-			}
-			set
-			{
-				if ((this._Arhivskibroj != value))
-				{
-					this.OnArhivskibrojChanging(value);
-					this.SendPropertyChanging();
-					this._Arhivskibroj = value;
-					this.SendPropertyChanged("Arhivskibroj");
-					this.OnArhivskibrojChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BrojNaPonuda", DbType="NVarChar(50)")]
-		public string BrojNaPonuda
-		{
-			get
-			{
-				return this._BrojNaPonuda;
-			}
-			set
-			{
-				if ((this._BrojNaPonuda != value))
-				{
-					this.OnBrojNaPonudaChanging(value);
-					this.SendPropertyChanging();
-					this._BrojNaPonuda = value;
-					this.SendPropertyChanged("BrojNaPonuda");
-					this.OnBrojNaPonudaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDFirma", DbType="Int NOT NULL")]
-		public int IDFirma
-		{
-			get
-			{
-				return this._IDFirma;
-			}
-			set
-			{
-				if ((this._IDFirma != value))
-				{
-					this.OnIDFirmaChanging(value);
-					this.SendPropertyChanging();
-					this._IDFirma = value;
-					this.SendPropertyChanged("IDFirma");
-					this.OnIDFirmaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDVraboteni", DbType="Int NOT NULL")]
-		public int IDVraboteni
-		{
-			get
-			{
-				return this._IDVraboteni;
-			}
-			set
-			{
-				if ((this._IDVraboteni != value))
-				{
-					this.OnIDVraboteniChanging(value);
-					this.SendPropertyChanging();
-					this._IDVraboteni = value;
-					this.SendPropertyChanged("IDVraboteni");
-					this.OnIDVraboteniChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDLicaZaKontakt", DbType="Int")]
-		public System.Nullable<int> IDLicaZaKontakt
-		{
-			get
-			{
-				return this._IDLicaZaKontakt;
-			}
-			set
-			{
-				if ((this._IDLicaZaKontakt != value))
-				{
-					this.OnIDLicaZaKontaktChanging(value);
-					this.SendPropertyChanging();
-					this._IDLicaZaKontakt = value;
-					this.SendPropertyChanged("IDLicaZaKontakt");
-					this.OnIDLicaZaKontaktChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DataZaOdgovor", DbType="DateTime")]
-		public System.Nullable<System.DateTime> DataZaOdgovor
-		{
-			get
-			{
-				return this._DataZaOdgovor;
-			}
-			set
-			{
-				if ((this._DataZaOdgovor != value))
-				{
-					this.OnDataZaOdgovorChanging(value);
-					this.SendPropertyChanging();
-					this._DataZaOdgovor = value;
-					this.SendPropertyChanged("DataZaOdgovor");
-					this.OnDataZaOdgovorChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KalendarskaGodina", DbType="NVarChar(50)")]
-		public string KalendarskaGodina
-		{
-			get
-			{
-				return this._KalendarskaGodina;
-			}
-			set
-			{
-				if ((this._KalendarskaGodina != value))
-				{
-					this.OnKalendarskaGodinaChanging(value);
-					this.SendPropertyChanging();
-					this._KalendarskaGodina = value;
-					this.SendPropertyChanged("KalendarskaGodina");
-					this.OnKalendarskaGodinaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IzdadenoNa", DbType="Date")]
-		public System.Nullable<System.DateTime> IzdadenoNa
-		{
-			get
-			{
-				return this._IzdadenoNa;
-			}
-			set
-			{
-				if ((this._IzdadenoNa != value))
-				{
-					this.OnIzdadenoNaChanging(value);
-					this.SendPropertyChanging();
-					this._IzdadenoNa = value;
-					this.SendPropertyChanged("IzdadenoNa");
-					this.OnIzdadenoNaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDTemp", DbType="Int NOT NULL")]
-		public int IDTemp
-		{
-			get
-			{
-				return this._IDTemp;
-			}
-			set
-			{
-				if ((this._IDTemp != value))
-				{
-					this.OnIDTempChanging(value);
-					this.SendPropertyChanging();
-					this._IDTemp = value;
-					this.SendPropertyChanged("IDTemp");
-					this.OnIDTempChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDPonudaStavka", DbType="NVarChar(50)")]
-		public string IDPonudaStavka
-		{
-			get
-			{
-				return this._IDPonudaStavka;
-			}
-			set
-			{
-				if ((this._IDPonudaStavka != value))
-				{
-					this.OnIDPonudaStavkaChanging(value);
-					this.SendPropertyChanging();
-					this._IDPonudaStavka = value;
-					this.SendPropertyChanged("IDPonudaStavka");
-					this.OnIDPonudaStavkaChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblStavka")]
 	public partial class tblStavka : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1726,6 +1424,284 @@ namespace APP_FIKT_ProGrupa
 					this._IDPonuda = value;
 					this.SendPropertyChanged("IDPonuda");
 					this.OnIDPonudaChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblDokumenti")]
+	public partial class tblDokumenti : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _IDDokument;
+		
+		private string _Arhivskibroj;
+		
+		private string _BrojNaPonuda;
+		
+		private int _IDFirma;
+		
+		private int _IDVraboteni;
+		
+		private System.Nullable<int> _IDLicaZaKontakt;
+		
+		private System.Nullable<System.DateTime> _DataZaOdgovor;
+		
+		private string _KalendarskaGodina;
+		
+		private System.Nullable<System.DateTime> _IzdadenoNa;
+		
+		private int _IDTemp;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDDokumentChanging(int value);
+    partial void OnIDDokumentChanged();
+    partial void OnArhivskibrojChanging(string value);
+    partial void OnArhivskibrojChanged();
+    partial void OnBrojNaPonudaChanging(string value);
+    partial void OnBrojNaPonudaChanged();
+    partial void OnIDFirmaChanging(int value);
+    partial void OnIDFirmaChanged();
+    partial void OnIDVraboteniChanging(int value);
+    partial void OnIDVraboteniChanged();
+    partial void OnIDLicaZaKontaktChanging(System.Nullable<int> value);
+    partial void OnIDLicaZaKontaktChanged();
+    partial void OnDataZaOdgovorChanging(System.Nullable<System.DateTime> value);
+    partial void OnDataZaOdgovorChanged();
+    partial void OnKalendarskaGodinaChanging(string value);
+    partial void OnKalendarskaGodinaChanged();
+    partial void OnIzdadenoNaChanging(System.Nullable<System.DateTime> value);
+    partial void OnIzdadenoNaChanged();
+    partial void OnIDTempChanging(int value);
+    partial void OnIDTempChanged();
+    #endregion
+		
+		public tblDokumenti()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDDokument", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int IDDokument
+		{
+			get
+			{
+				return this._IDDokument;
+			}
+			set
+			{
+				if ((this._IDDokument != value))
+				{
+					this.OnIDDokumentChanging(value);
+					this.SendPropertyChanging();
+					this._IDDokument = value;
+					this.SendPropertyChanged("IDDokument");
+					this.OnIDDokumentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Arhivskibroj", DbType="NVarChar(50)")]
+		public string Arhivskibroj
+		{
+			get
+			{
+				return this._Arhivskibroj;
+			}
+			set
+			{
+				if ((this._Arhivskibroj != value))
+				{
+					this.OnArhivskibrojChanging(value);
+					this.SendPropertyChanging();
+					this._Arhivskibroj = value;
+					this.SendPropertyChanged("Arhivskibroj");
+					this.OnArhivskibrojChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BrojNaPonuda", DbType="NVarChar(50)")]
+		public string BrojNaPonuda
+		{
+			get
+			{
+				return this._BrojNaPonuda;
+			}
+			set
+			{
+				if ((this._BrojNaPonuda != value))
+				{
+					this.OnBrojNaPonudaChanging(value);
+					this.SendPropertyChanging();
+					this._BrojNaPonuda = value;
+					this.SendPropertyChanged("BrojNaPonuda");
+					this.OnBrojNaPonudaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDFirma", DbType="Int NOT NULL")]
+		public int IDFirma
+		{
+			get
+			{
+				return this._IDFirma;
+			}
+			set
+			{
+				if ((this._IDFirma != value))
+				{
+					this.OnIDFirmaChanging(value);
+					this.SendPropertyChanging();
+					this._IDFirma = value;
+					this.SendPropertyChanged("IDFirma");
+					this.OnIDFirmaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDVraboteni", DbType="Int NOT NULL")]
+		public int IDVraboteni
+		{
+			get
+			{
+				return this._IDVraboteni;
+			}
+			set
+			{
+				if ((this._IDVraboteni != value))
+				{
+					this.OnIDVraboteniChanging(value);
+					this.SendPropertyChanging();
+					this._IDVraboteni = value;
+					this.SendPropertyChanged("IDVraboteni");
+					this.OnIDVraboteniChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDLicaZaKontakt", DbType="Int")]
+		public System.Nullable<int> IDLicaZaKontakt
+		{
+			get
+			{
+				return this._IDLicaZaKontakt;
+			}
+			set
+			{
+				if ((this._IDLicaZaKontakt != value))
+				{
+					this.OnIDLicaZaKontaktChanging(value);
+					this.SendPropertyChanging();
+					this._IDLicaZaKontakt = value;
+					this.SendPropertyChanged("IDLicaZaKontakt");
+					this.OnIDLicaZaKontaktChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DataZaOdgovor", DbType="Date")]
+		public System.Nullable<System.DateTime> DataZaOdgovor
+		{
+			get
+			{
+				return this._DataZaOdgovor;
+			}
+			set
+			{
+				if ((this._DataZaOdgovor != value))
+				{
+					this.OnDataZaOdgovorChanging(value);
+					this.SendPropertyChanging();
+					this._DataZaOdgovor = value;
+					this.SendPropertyChanged("DataZaOdgovor");
+					this.OnDataZaOdgovorChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KalendarskaGodina", DbType="NVarChar(50)")]
+		public string KalendarskaGodina
+		{
+			get
+			{
+				return this._KalendarskaGodina;
+			}
+			set
+			{
+				if ((this._KalendarskaGodina != value))
+				{
+					this.OnKalendarskaGodinaChanging(value);
+					this.SendPropertyChanging();
+					this._KalendarskaGodina = value;
+					this.SendPropertyChanged("KalendarskaGodina");
+					this.OnKalendarskaGodinaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IzdadenoNa", DbType="Date")]
+		public System.Nullable<System.DateTime> IzdadenoNa
+		{
+			get
+			{
+				return this._IzdadenoNa;
+			}
+			set
+			{
+				if ((this._IzdadenoNa != value))
+				{
+					this.OnIzdadenoNaChanging(value);
+					this.SendPropertyChanging();
+					this._IzdadenoNa = value;
+					this.SendPropertyChanged("IzdadenoNa");
+					this.OnIzdadenoNaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDTemp", DbType="Int NOT NULL")]
+		public int IDTemp
+		{
+			get
+			{
+				return this._IDTemp;
+			}
+			set
+			{
+				if ((this._IDTemp != value))
+				{
+					this.OnIDTempChanging(value);
+					this.SendPropertyChanging();
+					this._IDTemp = value;
+					this.SendPropertyChanged("IDTemp");
+					this.OnIDTempChanged();
 				}
 			}
 		}

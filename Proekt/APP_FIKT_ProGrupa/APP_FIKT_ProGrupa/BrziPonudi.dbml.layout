@@ -38,16 +38,16 @@
         <elementListCompartment Id="ca06f150-eb7b-4ec3-bff0-14960ec8fb79" absoluteBounds="4.14, 1.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="dc9b4c3e-f441-4b29-a9ed-635e994ac096" isExpanded="false" absoluteBounds="0.5, 1, 2, 0.45">
-      <DataClassMoniker Name="/BrziPonudiDataContext/tblDokumenti" />
-      <nestedChildShapes>
-        <elementListCompartment Id="6b2cad9a-0c55-4d28-84f3-f292d4c2a348" absoluteBounds="0.51500000000000012, 1.46, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="f0980e76-d5e2-494a-9f59-f603dc43995c" isExpanded="false" absoluteBounds="0.5, 2.75, 2, 0.45">
       <DataClassMoniker Name="/BrziPonudiDataContext/tblStavka" />
       <nestedChildShapes>
         <elementListCompartment Id="7a313e43-95b2-4a99-84ca-caa3a90d9c2c" absoluteBounds="0.51500000000000012, 3.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a9a1a08e-98e9-4cf8-8d93-ce3c7644c01b" isExpanded="false" absoluteBounds="0.5, 1, 2, 0.45">
+      <DataClassMoniker Name="/BrziPonudiDataContext/tblDokumenti" />
+      <nestedChildShapes>
+        <elementListCompartment Id="63eb6fef-bf4b-4b1e-8ebe-94b2b99adba6" absoluteBounds="0.515, 1.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

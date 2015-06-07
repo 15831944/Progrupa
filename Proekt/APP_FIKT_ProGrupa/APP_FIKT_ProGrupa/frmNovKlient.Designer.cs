@@ -302,7 +302,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label8);
             this.Name = "frmNovKlient";
-            this.Text = "frmNovKlient";
+            this.Text = "Внеси Клиент";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdLicaKontakt)).EndInit();
             this.groupBox2.ResumeLayout(false);

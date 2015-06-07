@@ -217,7 +217,7 @@
             this.MinimizeBox = false;
             this.Name = "frmSignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmSignUp";
+            this.Text = "Регистрација";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSignUp_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

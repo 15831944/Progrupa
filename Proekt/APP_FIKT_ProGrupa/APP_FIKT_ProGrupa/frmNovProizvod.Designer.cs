@@ -139,7 +139,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmNovProizvod";
-            this.Text = "frmNovProizvod";
+            this.Text = "Внеси Производ";
             this.ResumeLayout(false);
             this.PerformLayout();
 

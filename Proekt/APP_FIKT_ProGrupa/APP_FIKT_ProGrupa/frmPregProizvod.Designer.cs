@@ -50,7 +50,7 @@
             this.ClientSize = new System.Drawing.Size(350, 262);
             this.Controls.Add(this.grdPregProizvod);
             this.Name = "frmPregProizvod";
-            this.Text = "frmPregProizvod";
+            this.Text = "Прегледај Производи";
             this.Load += new System.EventHandler(this.frmPregProizvod_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdPregProizvod)).EndInit();
             this.ResumeLayout(false);

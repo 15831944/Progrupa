@@ -63,7 +63,7 @@
             this.Controls.Add(this.grdPregLicaKontakt);
             this.Controls.Add(this.grdPregKlient);
             this.Name = "frmPregKlient";
-            this.Text = "frmPregKlient";
+            this.Text = "Прегледај клиенти и лица за контакт";
             this.Load += new System.EventHandler(this.frmPregKlient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdPregKlient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdPregLicaKontakt)).EndInit();

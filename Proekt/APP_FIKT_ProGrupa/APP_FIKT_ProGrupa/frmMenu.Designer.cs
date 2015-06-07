@@ -46,7 +46,6 @@
             this.mnuVrabAll = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuKlient = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuVnesiKlient = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuIzmeniKlient = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPregledajKlient = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPregledajPonKlient = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
@@ -186,7 +185,6 @@
             // 
             this.mnuKlient.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuVnesiKlient,
-            this.mnuIzmeniKlient,
             this.mnuPregledajKlient,
             this.mnuPregledajPonKlient,
             this.toolStripMenuItem2,
@@ -201,12 +199,6 @@
             this.mnuVnesiKlient.Size = new System.Drawing.Size(239, 22);
             this.mnuVnesiKlient.Text = "Внеси клиент";
             this.mnuVnesiKlient.Click += new System.EventHandler(this.mnuVnesiKlient_Click);
-            // 
-            // mnuIzmeniKlient
-            // 
-            this.mnuIzmeniKlient.Name = "mnuIzmeniKlient";
-            this.mnuIzmeniKlient.Size = new System.Drawing.Size(239, 22);
-            this.mnuIzmeniKlient.Text = "Измени клиент";
             // 
             // mnuPregledajKlient
             // 
@@ -264,7 +256,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMenu";
-            this.Text = "frmMenu";
+            this.Text = "Брзи Понуди";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMenu_FormClosed);
             this.Load += new System.EventHandler(this.frmMenu_Load);
@@ -288,7 +280,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuPregledajVraboten;
         private System.Windows.Forms.ToolStripMenuItem mnuKlient;
         private System.Windows.Forms.ToolStripMenuItem mnuVnesiKlient;
-        private System.Windows.Forms.ToolStripMenuItem mnuIzmeniKlient;
         private System.Windows.Forms.ToolStripMenuItem mnuPregledajKlient;
         private System.Windows.Forms.ToolStripMenuItem mnuPregledajPonKlient;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;

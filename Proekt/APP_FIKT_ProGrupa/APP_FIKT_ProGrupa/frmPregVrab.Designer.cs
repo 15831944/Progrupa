@@ -50,7 +50,7 @@
             this.ClientSize = new System.Drawing.Size(932, 320);
             this.Controls.Add(this.grdPregVrab);
             this.Name = "frmPregVrab";
-            this.Text = "frmPregVrab";
+            this.Text = "Прегледај Вработени";
             this.Load += new System.EventHandler(this.frmPregVrab_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdPregVrab)).EndInit();
             this.ResumeLayout(false);
