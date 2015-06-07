@@ -11,4 +11,5 @@ tuku samo mavame sync i kaj site izlegva srabotenoto :D
 
 baza backUp -> DB_FIKT_ProGrupa.bak
 proekt      -> dir APP_FIKT_ProGrupa
+** za da raboti aplikacijata, mora vo app.config da se smeni connection string
 pozz
