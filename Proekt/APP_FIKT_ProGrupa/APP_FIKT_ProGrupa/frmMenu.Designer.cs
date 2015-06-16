@@ -92,6 +92,7 @@
             this.mnuPregledajPonuda.Name = "mnuPregledajPonuda";
             this.mnuPregledajPonuda.Size = new System.Drawing.Size(179, 22);
             this.mnuPregledajPonuda.Text = "Преглед на понуди";
+            this.mnuPregledajPonuda.Click += new System.EventHandler(this.mnuPregledajPonuda_Click);
             // 
             // toolStripMenuItem1
             // 

@@ -50,6 +50,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BrziPonudi.dbml</DependentUpon>
     </Compile>
+    <Compile Include="DB_FIKT_ProGrupaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_FIKT_ProGrupaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +90,12 @@
     </Compile>
     <Compile Include="frmPregKlient.Designer.cs">
       <DependentUpon>frmPregKlient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPregledPonuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPregledPonuda.Designer.cs">
+      <DependentUpon>frmPregledPonuda.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPregProizvod.cs">
       <SubType>Form</SubType>
@@ -136,6 +147,9 @@
     <EmbeddedResource Include="frmPregKlient.resx">
       <DependentUpon>frmPregKlient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPregledPonuda.resx">
+      <DependentUpon>frmPregledPonuda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPregProizvod.resx">
       <DependentUpon>frmPregProizvod.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +181,17 @@
     </None>
     <None Include="BrziPonudi.dbml.layout">
       <DependentUpon>BrziPonudi.dbml</DependentUpon>
+    </None>
+    <None Include="DB_FIKT_ProGrupaDataSet.xsc">
+      <DependentUpon>DB_FIKT_ProGrupaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DB_FIKT_ProGrupaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_FIKT_ProGrupaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_FIKT_ProGrupaDataSet.xss">
+      <DependentUpon>DB_FIKT_ProGrupaDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

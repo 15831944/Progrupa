@@ -18,3 +18,4 @@ D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_Pro
 D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.frmPregKlient.resources
 D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.csproj.ResolveComReference.cache
 D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.frmNovaPonuda.resources
+D:\visual studio 2013\APP_FIKT_ProGrupa\APP_FIKT_ProGrupa\obj\Debug\APP_FIKT_ProGrupa.frmPregledPonuda.resources

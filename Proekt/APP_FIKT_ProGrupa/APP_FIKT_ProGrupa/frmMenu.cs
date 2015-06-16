@@ -171,6 +171,12 @@ namespace APP_FIKT_ProGrupa
             novaPonuda.Show();
         }
 
+        private void mnuPregledajPonuda_Click(object sender, EventArgs e)
+        {
+            frmPregledPonuda pregledPonudi = new frmPregledPonuda(this);
+            pregledPonudi.Show();
+        }
+
 
     }
 }
